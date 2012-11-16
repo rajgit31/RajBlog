@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>VS2010 Undo Close Documents</title>
+  <description />
+  <content>&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;I thought this would be quite a nice feature to share with you all. &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h1 style="margin: 0cm 0cm 0pt;"&gt;&lt;em&gt;&lt;span style="font-family: Arial;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-size: 12pt; font-family: Arial; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;&lt;span style="font-size: 12pt; font-family: &amp;quot;Times New Roman&amp;quot;; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;Prerequisites&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;/h1&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You need to download &lt;a href="http://visualstudiogallery.msdn.microsoft.com/en-us/e5f41ad9-4edc-4912-bca3-91147db95b99"&gt;&lt;span style="color: #800080;"&gt;Power Commands for Visual Studio 2010.&lt;/span&gt;&lt;/a&gt; It is free. &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;strong&gt;&lt;em&gt;What&amp;rsquo;s this all about?&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You might already know this, if not this is about re opening the closed documents.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;There are two ways to this.&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;1. Re opening the most recent closed document.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;img src="/image.axd?picture=2010%2f5%2fPic1.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;If you close one or many opened documents within VS, you can re open the last closed document by navigating to Edit -&amp;gt; Undo Close. Alternatively you can use &lt;strong&gt;Ctrl + Shift + Z&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;2. Undo Closed Window.&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You can also see your last closed documents in &amp;ldquo;Undo Close Window&amp;rdquo;. You can open this window by just navigating to View&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;-&amp;gt; Other Windows - &amp;gt; Undo Closed Windows&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;"&gt;&amp;nbsp;&lt;img src="/image.axd?picture=2010%2f5%2fpic3.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt; mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;"&gt;&lt;img src="/image.axd?picture=2010%2f5%2fpic2.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;By just double clicking each one of them you can re open the closed documents.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;While ago I wrote about an issue with VS 2010 where documents not closing when attempt to close all at first time. You can find more information from here.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;&lt;a href="http://blog.rajsoftware.com/post/2010/04/10/VS2010-RC-bugs-2(two)-that-I-reported-in-MS-Connect.aspx"&gt;http://blog.rajsoftware.com/post/2010/04/10/VS2010-RC-bugs-2(two)-that-I-reported-in-MS-Connect.aspx&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Also note that Power Commands for VS2010 comes with lots of other nice features.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;You can find all those features from &lt;a href="http://visualstudiogallery.msdn.microsoft.com/en-us/e5f41ad9-4edc-4912-bca3-91147db95b99" target="_blank"&gt;here&lt;/a&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;I hope you like this.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-05-18 22:14:00</pubDate>
+  <lastModified>2010-12-08 08:09:44</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>VS2010-Undo-Close-Documents</slug>
+  <tags />
+  <comments>
+    <comment id="28b4127a-793c-4949-b2cc-a4f148ee26b3" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-22 09:32:04</date>
+      <author>Json</author>
+      <email>app@smply.com</email>
+      <country>au</country>
+      <ip>123.243.127.167</ip>
+      <website>http://rajsoftware.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks a nice tip.</content>
+    </comment>
+    <comment id="6797c949-f037-490e-ab5b-4c649b1cef8c" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-22 15:00:12</date>
+      <author>Albert</author>
+      <email>app@smply.com</email>
+      <country>au</country>
+      <ip>123.243.127.167</ip>
+      <website>http://rajsoftware.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Nice article. I'm going to download the Power Commands now. Thanks a lot.</content>
+    </comment>
+    <comment id="3c536148-5c77-46df-8033-454da92af552" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-30 10:28:44</date>
+      <author>rajsoftware.wordpress.com</author>
+      <email>pingback</email>
+      <country />
+      <ip>66.135.48.240</ip>
+      <website>http://rajsoftware.wordpress.com/2010/05/30/my-recent-posts/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <content>Pingback from rajsoftware.wordpress.com
+
+My recent posts&amp;#8230; &amp;laquo; Raj Aththanayake&amp;#039;s Blog</content>
+    </comment>
+  </comments>
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+  </categories>
+  <notifications>
+    <email>hwlonger1988@gmail.com</email>
+    <email>meirong75@gmail.com</email>
+  </notifications>
+</post>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Debug Visualizers</title>
+  <description />
+  <content>&lt;p&gt;This was introduced in VS2005. &amp;nbsp;It is a great feature, which demonstrates the extensibility of the IDE features. You can create your own Debug Visualizers as well.&lt;/p&gt;
+&lt;p&gt;I found&amp;nbsp;something quite useful for Regex. Below is a link to the&amp;nbsp;&lt;strong&gt;&lt;a href="http://weblogs.asp.net/rosherove/archive/2005/11/26/AnnoucingRegexKit10.aspx"&gt;Regex Debug Visualizers&lt;/a&gt;.&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;Just follow the instruction and you can get it up and running in no time.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://rajsoftware.files.wordpress.com/2010/03/debug.jpg?w=300" alt="" /&gt;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-04-03 22:43:00</pubDate>
+  <lastModified>2010-12-08 08:16:52</lastModified>
+  <raters>1</raters>
+  <rating>5</rating>
+  <slug>Debug-Visualizers</slug>
+  <tags />
+  <comments />
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+  </categories>
+  <notifications />
+</post>

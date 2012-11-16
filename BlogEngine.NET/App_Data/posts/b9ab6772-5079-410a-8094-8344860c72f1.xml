@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>TEST CODE</title>
+  <description />
+  <content>&lt;pre class="brush: jscript"&gt;/**
+ * SyntaxHighlighter
+ */
+function foo()
+{
+    if (counter &amp;lt;= 10)
+        return;
+    // it works!
+}
+&lt;/pre&gt;</content>
+  <ispublished>False</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-05-01 13:38:00</pubDate>
+  <lastModified>2010-05-01 13:38:45</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>TEST-CODE</slug>
+  <tags />
+  <comments />
+  <categories />
+  <notifications />
+</post>

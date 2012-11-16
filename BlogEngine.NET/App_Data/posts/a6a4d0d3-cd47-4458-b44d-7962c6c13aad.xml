@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Getting started with Enterprise Library Performance Counters</title>
+  <description />
+  <content>&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;This article is based on Enterprise Library 4.1 - October 2008.&lt;/span&gt;&lt;/p&gt;
+&lt;div class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;One of the hurdles of using Enterprise Library is that there are no much &lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&lt;/span&gt;help on how to do certain things from the scratch. The Enterprise Library &lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&lt;/span&gt;Quick Start guide and the Labs are helpful but I find there is no much depth in some areas such as Performance counters. Recently I had to utilize some performance counters within our application.&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;It wasn&amp;rsquo;t that straightforward and I had to do lot of trial and error exercises to get it working. This is an attempt to give you some insight into how to utilise performance counters using Enterprise Library 4.1. &lt;/span&gt;&lt;/p&gt;
+&lt;span style="font-family: Calibri; font-size: small;"&gt;
+&lt;p&gt;&amp;nbsp;&lt;span style="font-family: Calibri; font-size: small;"&gt;I&amp;rsquo;m going to explain you how to create performance counters using &lt;span style="text-decoration: underline;"&gt;Entib configuration&lt;/span&gt;. There are other ways -&amp;nbsp;For example using Performance Counter handlers using attributes which I&amp;rsquo;m not going to explain here. Also I do not cover detail information on using performance counters and best practices. This is just to get you started with Entlib 4.1 and performance counters&lt;/span&gt;&lt;/p&gt;
+&lt;/span&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;First thing is first &amp;ndash; You must install the Microsoft practices Enterprise Library 4.1 from the location here.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=1643758B-2986-47F7-B529-3E41584B6CE5&amp;amp;displaylang=en"&gt;&lt;span style="font-family: Calibri; color: #0000ff; font-size: small;"&gt;http://www.microsoft.com/downloads/details.aspx?FamilyId=1643758B-2986-47F7-B529-3E41584B6CE5&amp;amp;displaylang=en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Calibri;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;Creating performance counters using Entlib configuration&lt;/strong&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpFirst" style="text-indent: -18pt; margin: 0cm 0cm 0pt 36pt; mso-list: l0 level1 lfo1;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;1.&lt;/span&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Calibri;"&gt;To create counters you need to have an administrative account. You need to open &lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&lt;/span&gt;Visual Studio (VS) as an administrator. Then create a new Console application for example let&amp;rsquo;s say it &lt;strong style="mso-bidi-font-weight: normal;"&gt;SamplePerformanceCounters. &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpLast" style="margin: 0cm 0cm 10pt 36pt;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Calibri;"&gt;Now add below reference to your project.&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Microsoft.Practices.EnterpriseLibrary.Common.Configuration;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Microsoft.Practices.EnterpriseLibrary.PolicyInjection;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;2.&lt;/span&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;Create a new class called MyCounters.cs. &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpLast" style="margin: 0cm 0cm 10pt 36pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;Your class should derive from &lt;/span&gt;&lt;span style="line-height: 115%; font-family: Consolas; color: #2b91af; font-size: 9.5pt;"&gt;MarshalByRefObject. &lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;This class sits under &lt;em style="mso-bidi-font-style: normal;"&gt;System &lt;/em&gt;namespace and you need to add the using statement &lt;/span&gt;&lt;span style="line-height: 115%; font-family: Consolas; color: blue; font-size: 9.5pt;"&gt;using&lt;/span&gt;&lt;span style="line-height: 115%; font-family: Consolas; font-size: 9.5pt;"&gt; System.Reflection;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="MARGIN: 0cm 0cm 10pt"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;public class MyCounters : MarshalByRefObject {}&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="line-height: normal; margin: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-layout-grid-align: none;"&gt;&lt;span style="font-family: Consolas; color: #2b91af; font-size: 9.5pt;"&gt;MarshalByRefObject &lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;object will allow you to do policy injection on the MyCounters class. Alternatively you may also create an interface i.e &lt;em style="mso-bidi-font-style: normal;"&gt;IMyCounters. &lt;/em&gt;This will allow us to create a proxy object that can be used with Entlib policy injection.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; public void SampleMethod(int i) { }&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;4.&lt;/span&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;Our next task is to install the counters which we want to execute on &lt;em style="mso-bidi-font-style: normal;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;SampleMethod&lt;/span&gt;&lt;/em&gt;. You can create performance counters as below.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;
+&lt;pre class="brush: c-sharp;"&gt;        public static void  InstallCounters()
+        {
+            PerformanceCountersInstaller installer = new PerformanceCountersInstaller(new SystemConfigurationSource());
+            IDictionary state = new System.Collections.Hashtable();
+            installer.Context = new InstallContext();
+            installer.Install(state);
+            installer.Commit(state);
+            Console.WriteLine("Performance counters have been successfully installed. Press enter to continue");
+            Console.ReadLine();
+        }
+
+&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 36pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;These counters needed to be installed first before you calling the &lt;/span&gt;&lt;em style="mso-bidi-font-style: normal;"&gt;&lt;span style="line-height: 115%; font-family: Consolas; font-size: 9.5pt;"&gt;SampleMethod. &lt;/span&gt;&lt;/em&gt;&lt;span style="line-height: 115%; font-family: Consolas; font-size: 9.5pt;"&gt;Therefore &lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;within your &lt;em style="mso-bidi-font-style: normal;"&gt;Main&lt;/em&gt; method call the &lt;/span&gt;&lt;span style="line-height: 115%; font-family: Consolas; font-size: 9.5pt;"&gt;InstallCounters() &lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;method.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 36pt;"&gt;&lt;em style="mso-bidi-font-style: normal;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Calibri;"&gt;Note : You can also remove the installed counters by....&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;        private static void RemoveCounters()
+        {
+            PerformanceCountersInstaller installer  = new PerformanceCountersInstaller(new SystemConfigurationSource());
+            installer.Context = new InstallContext();
+            installer.Uninstall(null);
+            Console.WriteLine("Performance counters have been successfully removed. Press enter to continue.");
+            Console.ReadLine();
+        }&lt;/pre&gt;
+&lt;p class="MsoListParagraph" style="TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"&gt;&lt;span style="mso-list: Ignore"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;5.&lt;/span&gt;&lt;span style="FONT: 7pt 'Times New Roman'"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;Within the &lt;em style="mso-bidi-font-style: normal"&gt;Main&lt;/em&gt; method you need to create the policy injection for &lt;/span&gt;&lt;span style="LINE-HEIGHT: 115%; FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt"&gt;MyCounters &lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;object.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="LINE-HEIGHT: normal; MARGIN: 0cm 0cm 0pt 18pt; mso-layout-grid-align: none"&gt;&lt;span style="FONT-FAMILY: Consolas; COLOR: #2b91af; FONT-SIZE: 9.5pt"&gt;&lt;span style="mso-spacerun: yes"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;MyCounters&lt;/span&gt;&lt;span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"&gt; myCounter = &lt;span style="COLOR: #2b91af"&gt;PolicyInjection&lt;/span&gt;.Create&amp;lt;&lt;span style="COLOR: #2b91af"&gt;MyCounters&lt;/span&gt;&amp;gt;();&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="MARGIN: 0cm 0cm 10pt"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpFirst" style="TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-list: l0 level1 lfo1"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"&gt;&lt;span style="mso-list: Ignore"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;6.&lt;/span&gt;&lt;span style="FONT: 7pt 'Times New Roman'"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;Now you can call the SampleMethod as below. You can create a &lt;em style="mso-bidi-font-style: normal"&gt;for loop &lt;/em&gt;and pass the integer variable to the sample method so every time when it executes, you can see the integer in the console window.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpMiddle" style="LINE-HEIGHT: normal; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-layout-grid-align: none"&gt;&lt;span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpLast" style="LINE-HEIGHT: normal; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-layout-grid-align: none"&gt;&lt;span style="FONT-FAMILY: Consolas; FONT-SIZE: 9.5pt"&gt;myCounter.SampleMethod(i)&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="LINE-HEIGHT: normal; TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-list: l0 level1 lfo1; mso-layout-grid-align: none"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"&gt;&lt;span style="mso-list: Ignore"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;7.&lt;/span&gt;&lt;span style="FONT: 7pt 'Times New Roman'"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Calibri;"&gt;All together this is how it looks like&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="LINE-HEIGHT: normal; TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-list: l0 level1 lfo1; mso-layout-grid-align: none"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="LINE-HEIGHT: normal; TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-list: l0 level1 lfo1; mso-layout-grid-align: none"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;         static void Main(string[] args)
+        {
+            InstallCounters();
+            //RemoveCounters();    
+
+            MyCounters myCounter = PolicyInjection.Create();
+
+            for (int i = 0; i &amp;lt; 100000000; i++)
+            {
+                    Thread.Sleep(500);
+
+                    service.SampleMethod(i);           
+            }
+
+            
+            Console.ReadLine();
+        }
+
+&lt;/pre&gt;
+&lt;p class="MsoListParagraph" style="LINE-HEIGHT: normal; TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-list: l0 level1 lfo1; mso-layout-grid-align: none"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="LINE-HEIGHT: normal; TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-list: l0 level1 lfo1; mso-layout-grid-align: none"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="LINE-HEIGHT: normal; TEXT-INDENT: -18pt; MARGIN: 0cm 0cm 0pt 36pt; mso-add-space: auto; mso-list: l0 level1 lfo1; mso-layout-grid-align: none"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Note that we use &lt;em style="mso-bidi-font-style: normal;"&gt;Thread.Sleep &lt;/em&gt;so we can delay the method execution, which gives us clear indications on the performance being monitored.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpMiddle" style="margin: 0cm 0cm 0pt 36pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpLast" style="margin: 0cm 0cm 10pt 36pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;We have not finished yet. Below is the most important section.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraphCxSpLast" style="margin: 0cm 0cm 10pt 36pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&lt;span style="font-family: Times New Roman; font-size: small;"&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font-family: Calibri;"&gt;8.&lt;/span&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri;"&gt;Now we need to define the counters that we need to instrument. To do that you need to create an App.config file. You can either add entries to app.config manually, or you could use the Enterprise library configuration tool which comes with the installation. My personal opinion is to use the tool as it is much easier to configure the counters.&lt;/span&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f8%2fUntitled.png" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;9.&lt;/span&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;You also need to create a policy injection application block and a policy with a matching rule. In our case I created the SampleCounters with the Method Signature matching rule.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f8%2fUntitled2.png" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="mso-list: Ignore;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;10.&lt;/span&gt;&lt;span style="font: 7pt &amp;quot;Times New Roman&amp;quot;;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;The final step is to configure the counters.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 36pt; mso-list: l0 level1 lfo1;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f8%2fUntitled3.png" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;That&amp;rsquo;s it, and run your application.&amp;nbsp;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f8%2fUntitled5.png" alt="" /&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;To view the performance counters in action, you need to open the Windows Performance Monitor tool. You can find it in Windows Administrative tools.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;As mentioned above &lt;em style="mso-bidi-font-style: normal;"&gt;Press enter to continue&lt;/em&gt;. While the integers are printing in the console window, click on Add Counters and select &lt;em style="mso-bidi-font-style: normal;"&gt;Demo Counter &lt;/em&gt;category from the list. Add &lt;em style="mso-bidi-font-style: normal;"&gt;Instances &lt;/em&gt;as required. Click OK. Now you should be able to see counters in action in the Windows Performance Monitor.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f8%2fUntitled6.png" alt="" /&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;I hope this helps. &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-08-21 12:01:00</pubDate>
+  <lastModified>2010-08-21 12:34:51</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>Getting-started-with-Enterprise-Library-Performance-Counters</slug>
+  <tags />
+  <comments>
+    <comment id="4f6f5248-ea06-4b37-a4b5-2cc9dde7283c" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-08-25 21:53:10</date>
+      <author>Raj Aththanayake's Blog</author>
+      <email>trackback</email>
+      <country />
+      <ip>203.89.228.50</ip>
+      <website>http://blog.rajsoftware.com/post/2010/08/26/Attribute-based-Performance-Counters-with-Enterprise-Library-41.aspx</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <content>Attribute based Performance Counters with Enterprise Library 4.1
+
+Attribute based Performance Counters with Enterprise Library 4.1</content>
+    </comment>
+    <comment id="12aa7563-f320-43dc-a0b9-c9ed263a4639" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-09-30 15:13:58</date>
+      <author>nike air jordan</author>
+      <email>hwlonger1988@gmail.com</email>
+      <country>cn</country>
+      <ip>218.104.234.16</ip>
+      <website>http://www.discount-air-jordan.com/</website>
+      <moderatedby>Rule:black list</moderatedby>
+      <avatar />
+      <content>Day past all not quit, LongTianHe XiaoYue in this moment is more than 10 days, the dragon is XiaoYue from several times a day XiaoYue didn't promise, say what must we wait for my mom and dad actually awake, they also must dragon days when he woke up, the family because there are two days in the New Year, will certainly to have a family together, all with XiaoYue dragon days only in the waiting, the heavens also know oneself of dragon, parents must be immediately wake up, because their pa</content>
+    </comment>
+    <comment id="b06071f0-9721-41d5-9f9a-8b1e04858aa2" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-09 13:12:38</date>
+      <author>dareformore.info</author>
+      <email>pingback</email>
+      <country />
+      <ip>174.37.183.103</ip>
+      <website>http://dareformore.info/?p=24</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <content>Pingback from dareformore.info
+
+[EntLib]å¾®è½¯ä¼ä¸šåº“5.0 å­¦ä¹ ä¹‹è·¯â€”â€”ç¬¬ä¹æ­¥ã€ä½¿ç”¨PolicyInjectionæ¨¡å—è¿›è¡ŒAOPâ€”PART3â€”â€”å†…ç½®Call Handlerä»‹ç» | çªç ´æ¸´æœ›</content>
+    </comment>
+    <comment id="5cb85da6-1259-4c7c-85d3-11f07294dee5" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-19 20:30:12</date>
+      <author>artist website</author>
+      <email>jan@artdealers.com</email>
+      <country>us</country>
+      <ip>210.213.253.34</ip>
+      <website>http://www.artdealers.com/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>This is such a fantastic blog. It really shows lots of informative data. Thanks for sharing this.</content>
+    </comment>
+    <comment id="1bda21b6-790b-4984-a84f-aa78308bf26a" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-12-01 16:12:41</date>
+      <author>louis vuitton</author>
+      <email>meirong75@gmail.com</email>
+      <country>cn</country>
+      <ip>120.32.69.80</ip>
+      <website>http://www.louisvuittonoutletstores2u.com/</website>
+      <moderatedby>Rule:black list</moderatedby>
+      <avatar />
+      <content>I'd like to read the articles in this website.May be you can go to &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt;,there will be some new and cheap louis vuitton products for choosen.You know &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt; didn't have the outlet store himself,but we provide the discount &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt; handbags,shoes,wallets,belts for Factory Direct price.So,enjoy yourself on our online shop.</content>
+    </comment>
+    <comment id="8ba60f3a-84a4-4c72-bc9c-6fdbd1284765" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2011-01-29 01:15:33</date>
+      <author>cheaphomeideas.com</author>
+      <email>pingback</email>
+      <country />
+      <ip>74.52.144.210</ip>
+      <website>http://cheaphomeideas.com/archives/17530</website>
+      <content>Pingback from cheaphomeideas.com
+
+7 Ways to Let Go Of Toxic People | Cheaphomeideas.com</content>
+    </comment>
+  </comments>
+  <categories>
+    <category>fd41e292-56d9-4b00-85ad-dc53bbdaee74</category>
+  </categories>
+  <notifications>
+    <email>meirong75@gmail.com</email>
+  </notifications>
+</post>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Downgrading your VS projects from VS 2010 to VS 2008</title>
+  <description />
+  <content>&lt;p&gt;&lt;span style="font-family: Calibri;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-size: small;"&gt;I know this not what we want to do or what we like to do. We all like to do the upgrade. However there are instances where you have a VS solution file that you created in VS 2010, and when you try to open it in a machine where only VS2008 installed, you cannot open it. I had this problem today and it is quite easy to resolve this issue.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 10pt;"&gt;&lt;span style="font-size: small;"&gt;Before you do anything backup your files. Open your solution file in your favourite text editor and change the below Format version to 10.00 and # visual studio version to 2008&lt;/span&gt;&lt;span style="font-family: Calibri;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f8%2fA.png" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;Below tool ToolsVersion to 3.5 if you have .NET 3.5 installed.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;img src="/image.axd?picture=2010%2f8%2fB.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: Calibri; font-size: small;"&gt;That&amp;rsquo;s it save your file and you can open your project and the solution in VS2008. . I hope this tip will be handy for you.&lt;/span&gt;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-08-12 19:52:00</pubDate>
+  <lastModified>2010-12-08 08:06:16</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>Downgrading-your-VS-projects-from-VS-2010-to-VS-2008</slug>
+  <tags />
+  <comments />
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+    <category>471add28-78f8-42e9-9e2f-8e75b81406c7</category>
+  </categories>
+  <notifications />
+</post>

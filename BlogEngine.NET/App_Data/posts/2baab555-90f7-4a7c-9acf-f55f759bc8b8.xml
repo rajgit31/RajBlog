@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>URL Routing in ASP.NET 4.0</title>
+  <description />
+  <content>&lt;p&gt;&lt;a href="http://rajsoftware.files.wordpress.com/2010/03/routing1.jpg"&gt;&lt;img class="alignright size-thumbnail wp-image-15" title="Routing" src="http://rajsoftware.files.wordpress.com/2010/03/routing1.jpg?w=100" alt="Routing" width="100" height="150" /&gt;&lt;/a&gt;In ASP.NET MVC you can have clean nice SEO friendly Url.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;http://mySite.com.au/Category/List&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://mySite.com.au/Product/Detail"&gt;http://mySite.com.au/Product/Detail&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;However with ASP.NET 3.5 SP1, Webforms require an implementation of an IRouteHandler to support clean nice Url.&amp;nbsp;This can be quite tedious, and often require more work.&amp;nbsp;&amp;nbsp;With ASP.NET 4.0, you can add this support easily without having to use or implement an IRouteHandler.&lt;/p&gt;
+&lt;p&gt;The below two articles explain how to achieve this in web forms.&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a title="URL Routing in ASP.NET 4.0" href="http://weblogs.asp.net/scottgu/archive/2009/10/13/url-routing-with-asp-net-4-web-forms-vs-2010-and-net-4-0-series.aspx" target="_self"&gt;Scott Gu's blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a title="ASP.NET 4.0 Routing" href="http://www.4guysfromrolla.com/articles/012710-1.aspx" target="_blank"&gt;4GuysFromRolla.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-04-03 22:39:00</pubDate>
+  <lastModified>2010-12-08 08:17:43</lastModified>
+  <raters>1</raters>
+  <rating>5</rating>
+  <slug>URL-Routing-in-ASPNET-40</slug>
+  <tags />
+  <comments />
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+  </categories>
+  <notifications>
+    <email>oshat4all@yahoo.com</email>
+    <email>meirong75@gmail.com</email>
+  </notifications>
+</post>

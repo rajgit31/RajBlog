@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>ASP.NET MVC 3 Preview 1 Source code</title>
+  <description />
+  <content>&lt;div&gt;Microsoft has uploaded the source code for MVC 3 Preview 1. You can download the source code from below&lt;/div&gt;
+&lt;div&gt;
+&lt;p class="MsoNoSpacing"&gt;&lt;span style="font-family: Arial, sans-serif; font-size: small;"&gt;&lt;span style="font-size: 12px;"&gt; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNoSpacing"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=cb42f741-8fb1-4f43-a5fa-812096f8d1e8&amp;amp;displaylang=en"&gt;&lt;span style="mso-bidi-font-weight: bold; mso-bidi-font-style: italic;"&gt;&lt;span style="font-weight: normal;"&gt;http://www.microsoft.com/downloads/details.aspx?FamilyID=cb42f741-8fb1-4f43-a5fa-812096f8d1e8&amp;amp;displaylang=en&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You can download the preview 1 from below link&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;p class="MsoNoSpacing"&gt;&lt;span style="font-family: Arial, sans-serif; font-size: small;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNoSpacing" style="font-size: 12px;"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=cb42f741-8fb1-4f43-a5fa-812096f8d1e8&amp;amp;displaylang=en"&gt;&lt;span style="mso-bidi-font-weight: bold; mso-bidi-font-style: italic;"&gt;&lt;span style="font-weight: normal;"&gt;http://www.microsoft.com/downloads/details.aspx?FamilyID=cb42f741-8fb1-4f43-a5fa-812096f8d1e8&amp;amp;displaylang=en&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;span style="font-size: 12px;"&gt; &lt;/span&gt;
+&lt;p&gt;There are some useful features (considered to be included in MVC 3) is now available in MVC Preview 1.&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;Some of the features in preview 3 features are below&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;New ActionResults&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;New Razor View Engine&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;HttpNotFoundResult, HttpRedirectResult with support for Permanent Redirects, and HttpStatusCodeResult.&lt;/li&gt;
+&lt;li&gt;Global Filters&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Model Binding to JSON&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Validation - .NET 4 introduced IValidatableObject and improvements on ValidationAttribute to provide even better validation and ASP.NET MVC 3 will offer better support for them.&lt;/li&gt;
+&lt;li&gt;Dependency Injection and Common Service Locator Enhancements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;You can find more information&lt;/div&gt;
+&lt;div&gt;
+&lt;p class="MsoNoSpacing"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="font-size: 9.0pt; mso-bidi-font-weight: bold; mso-bidi-font-style: italic;"&gt;&lt;span style="font-weight: normal;"&gt;&lt;a href="http://weblogs.asp.net/scottgu/archive/2008/05/27/asp-net-mvc-preview-3-release.aspx"&gt;http://weblogs.asp.net/scottgu/archive/2008/05/27/asp-net-mvc-preview-3-release.aspx&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNoSpacing"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;span style="font-size: 9.0pt; mso-bidi-font-weight: bold; mso-bidi-font-style: italic;"&gt;&lt;span style="font-weight: normal;"&gt; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNoSpacing"&gt;&lt;span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"&gt;&lt;a href="http://haacked.com/archive/2010/07/27/aspnetmvc3-preview1-released.aspx"&gt;&lt;span style="mso-bidi-font-weight: bold; mso-bidi-font-style: italic;"&gt;&lt;span style="font-weight: normal;"&gt;http://haacked.com/archive/2010/07/27/aspnetmvc3-preview1-released.aspx&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It is very early stage so there are no guarantees that all these features will be included in the final release.&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-08-10 06:03:00</pubDate>
+  <lastModified>2010-08-10 06:29:08</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>ASPNET-MVC-3-Preview-1-Source-code</slug>
+  <tags />
+  <comments>
+    <comment id="fd1188b9-7528-4fb3-83b7-64b3047a1280" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-08-12 20:05:55</date>
+      <author>Dubai Property for Sale</author>
+      <email>elysiandubai@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.elysianrealestate.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Ahaan, it's of great help source code. I was looking for it.
+
+http://www.elysianrealestate.com</content>
+    </comment>
+    <comment id="b3629649-8947-4b41-a7a2-84a9efeb7633" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-09-23 15:03:21</date>
+      <author>unusual flower arrangements</author>
+      <email>fariyalkhan95@yahoo.com</email>
+      <country>gb</country>
+      <ip>116.71.50.155</ip>
+      <website>http://www.flowersstore.co.uk/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I really love your blog. Excellent work!
+</content>
+    </comment>
+    <comment id="6ac276bb-acf0-420a-b562-a7904d0478c8" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-09-30 15:14:25</date>
+      <author>nike air jordan</author>
+      <email>hwlonger1988@gmail.com</email>
+      <country>cn</country>
+      <ip>218.104.234.16</ip>
+      <website>http://www.discount-air-jordan.com/</website>
+      <moderatedby>Rule:black list</moderatedby>
+      <avatar />
+      <content>Day past all not quit, LongTianHe XiaoYue in this moment is more than 10 days, the dragon is XiaoYue from several times a day XiaoYue didn't promise, say what must we wait for my mom and dad actually awake, they also must dragon days when he woke up, the family because there are two days in the New Year, will certainly to have a family together, all with XiaoYue dragon days only in the waiting, the heavens also know oneself of dragon, parents must be immediately wake up, because their pa</content>
+    </comment>
+    <comment id="682250df-0fff-46ca-a81d-4fa4457102f4" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-07 05:07:44</date>
+      <author>Jobs in Bahrain</author>
+      <email>s@allsaudijobs.com</email>
+      <country>us</country>
+      <ip>2.91.71.190</ip>
+      <website>http://jobsinbahrain.allsaudijobs.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Nice website I like it</content>
+    </comment>
+    <comment id="76cb7675-835e-4ac3-863e-2a0604cbd8f6" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-26 03:57:41</date>
+      <author>Jobs in Bahrain</author>
+      <email>s@allsaudijobs.com</email>
+      <country>us</country>
+      <ip>2.91.180.164</ip>
+      <website>http://jobsinbahrain.allsaudijobs.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Wow nice information you have here.Thanks for sharing Interesting blog. Actually google made searching of information easy on any topic. Well keep it up and post more interesting blogs.</content>
+    </comment>
+    <comment id="da5a6289-8c9a-4bc9-b4fe-7750ed99481c" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-03 00:54:05</date>
+      <author>Apartments for rent in Dubai </author>
+      <email>blogcommentz@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.thepropertystore.com/listings/residential/rent.xhtml</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>thanks for the article. I am going to tweet this one</content>
+    </comment>
+    <comment id="1319990c-000c-4e3b-8dfc-0dbaa9b9c659" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-03 23:45:35</date>
+      <author>Redford Towing Company </author>
+      <email>bernard8huff@yahoo.co.uk</email>
+      <country>us</country>
+      <ip>182.72.122.42</ip>
+      <website>http://www.towingredford.com/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>
+I happened to stumble across this website searching for something different, glad I stumbled into it though.  Very interesting.
+</content>
+    </comment>
+    <comment id="a93bd85b-b7b7-44f1-a073-b440ecce9f55" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-08 16:33:55</date>
+      <author>Dubai apartments</author>
+      <email>blogcommentz@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.thepropertystore.com/dubai_apartments.aspx</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Nice post to hang on.. Great work</content>
+    </comment>
+    <comment id="7f5e53d8-b2a3-4c0b-83bd-91f24ea647b5" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-13 15:13:47</date>
+      <author>moncler jackets</author>
+      <email>yrcompany002@yahoo.cn</email>
+      <country>us</country>
+      <ip>112.111.173.28</ip>
+      <website>http://www.monclerclassic.com/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>Me and my buddy had been arguing about an concern comparable to this! Now I realize that i experienced been right. lol! many thanks to the information and facts you post.</content>
+    </comment>
+    <comment id="94a03926-3e8d-4414-bf01-d22cc4a3cc14" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-17 06:00:55</date>
+      <author>Saudi jobs</author>
+      <email>s@alldubaijobs.net</email>
+      <country>us</country>
+      <ip>94.99.175.137</ip>
+      <website>http://www.alldubaijobs.net/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>Nice work. Thanks for sharing.</content>
+    </comment>
+    <comment id="25c3948a-e329-423f-a624-20c6e38fd917" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-11-18 19:43:17</date>
+      <author>Werkstoffpr&amp;#252;fung   </author>
+      <email>jack@gmail.com</email>
+      <country>us</country>
+      <ip>180.151.3.2</ip>
+      <website>http://www.werkstoffpruefung.de/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>Thanks for that important information, its really helpful.</content>
+    </comment>
+    <comment id="736bbe5e-b275-43c6-a2fa-7ad0be558118" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-18 21:02:22</date>
+      <author>Software Development Consulting</author>
+      <email>jmsbond175@gmail.com</email>
+      <country>in</country>
+      <ip>122.177.147.154</ip>
+      <website>http://www.pyramidci.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I admire your article. It contains valuable information. I wanted to thank you for this great read!! I enjoyed every little bit of it. I have bookmarked you to check out your new stuff.
+</content>
+    </comment>
+    <comment id="4d65f9e6-d941-4b90-b2bd-0904e620add8" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-22 17:30:51</date>
+      <author>Dubai properties</author>
+      <email>blogcommentz@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.thepropertystore.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I found so many interesting stuff in your blog especially its discussion. Keep up the good work..</content>
+    </comment>
+    <comment id="4644dc74-b8bd-4bcf-a7df-1e2382de43a7" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-25 13:09:34</date>
+      <author>fix slow windows xp		</author>
+      <email>lypyoyo@hotmail.com</email>
+      <country>pr</country>
+      <ip>123.119.237.76</ip>
+      <website>http://slow-xp.com/how-to-fix-slow-window-xp-and-optimize-your-computer.html</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>When you first got your computer, life was good because it ran super fast. However, you must be annoyed by the sluggish performance of your computer after frequent use. If you are also suffering from a slow XP, you do not have to thinking about replacing your computer because there are several tips for you to fix slow windows xp 
+</content>
+    </comment>
+    <comment id="399d7f4f-0e5d-49ee-82dc-6a247560f98f" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-28 18:36:17</date>
+      <author>apartment in Dubai</author>
+      <email>fearfreesoul@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.thepropertystore.com/dubai_apartments.aspx</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I can see that you are an expert at your field! Thanks for all your help and wishing you all the success in your business.</content>
+    </comment>
+    <comment id="a46c7d66-64f9-43d3-9056-1b6a064c0a52" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-28 18:37:41</date>
+      <author>cheap rent Dubai</author>
+      <email>fearfreesoul@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.halconrealestate.com/dubai/Rental_Property_in_Dubai.xhtml</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I admit, I have not been on this web page in a long time... I thank you to help making people more aware of possible issues.</content>
+    </comment>
+    <comment id="0564e372-62b9-4ae3-83c4-c5aaad7ac9c6" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-30 02:31:54</date>
+      <author>Web Design Dubai</author>
+      <email>fearfreesoul@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.wewanttraffic.com/services/website.shtml</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I admit, I have not been on this web page in a long time...</content>
+    </comment>
+    <comment id="cbcffc02-718d-4883-bfd6-f6f843a0d067" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-12-01 16:11:50</date>
+      <author>louis vuitton</author>
+      <email>meirong75@gmail.com</email>
+      <country>cn</country>
+      <ip>120.32.69.80</ip>
+      <website>http://www.louisvuittonoutletstores2u.com/</website>
+      <moderatedby>Rule:black list</moderatedby>
+      <avatar />
+      <content>I'd like to read the articles in this website.May be you can go to &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt;,there will be some new and cheap louis vuitton products for choosen.You know &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt; didn't have the outlet store himself,but we provide the discount &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt; handbags,shoes,wallets,belts for Factory Direct price.So,enjoy yourself on our online shop.</content>
+    </comment>
+    <comment id="97d5458b-ced4-4fb2-8ac4-5e09efa08a4a" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-06 02:54:30</date>
+      <author>writing service Dubai</author>
+      <email>submission@wewanttraffic.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.wewanttraffic.com/services/onlinecontent.shtml</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Wow....I really appreciate your posting it's really informative for me hope you always update more often and share to us what you know.</content>
+    </comment>
+    <comment id="64af5c2f-bf8a-49bb-8b15-a2e534391d48" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-07 01:17:49</date>
+      <author>Dubai homes</author>
+      <email>fearfreesoul@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.thepropertystore.com/dubai_accommodation_homes.aspx</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks for taking the time to discuss this, I feel strongly about it and love learning more on this topic. Thanks once again..</content>
+    </comment>
+    <comment id="075ed04e-710d-42fb-8f4a-2a26f9980663" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-07 01:19:07</date>
+      <author>Dubai mortgage</author>
+      <email>fearfreesoul@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.hamptons.ae/en-ae/Services/Mortgages/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>The information you provided is quite simple and clear for knowledge seeker.</content>
+    </comment>
+  </comments>
+  <categories />
+  <notifications>
+    <email>elysiandubai@gmail.com</email>
+    <email>jack@gmail.com</email>
+    <email>meirong75@gmail.com</email>
+  </notifications>
+</post>

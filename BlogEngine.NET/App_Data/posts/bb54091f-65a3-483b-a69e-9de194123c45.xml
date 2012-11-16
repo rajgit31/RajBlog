@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>Admin</author>
+  <title>tt</title>
+  <description />
+  <content>&lt;pre class="brush: jscript"&gt;/**
+ * SyntaxHighlighter
+ */
+function foo()
+{
+    if (counter &amp;lt;= 10)
+        return;
+    // it works!
+}
+&lt;/pre&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-04-05 11:37:00</pubDate>
+  <lastModified>2010-05-01 11:04:29</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>tt</slug>
+  <tags />
+  <comments>
+    <comment id="1eedc3c3-c1b8-4d46-b139-5fd61fb49c6d" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-21 23:05:48</date>
+      <author>asda</author>
+      <email>asasas@email.com</email>
+      <country>us</country>
+      <ip>127.0.0.1</ip>
+      <website>http://asas.com/</website>
+      <moderatedby>Rule:authenticated</moderatedby>
+      <avatar />
+      <content>acacascaca</content>
+    </comment>
+    <comment id="8956b839-59be-44dd-9b3a-d3a7b9c24920" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-27 19:42:52</date>
+      <author>asca</author>
+      <email>e1er12@fef.com</email>
+      <country>be</country>
+      <ip>127.0.0.1</ip>
+      <website>http://aaaaa.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>sxsxsxsxsx</content>
+    </comment>
+    <comment id="9d0951ec-a1fb-473c-a617-4fc5057beef9" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-27 19:50:31</date>
+      <author>qwdwq</author>
+      <email>ddd@email.com</email>
+      <country>au</country>
+      <ip>127.0.0.1</ip>
+      <website>http://cascasc.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>ssxs</content>
+    </comment>
+    <comment id="ebc3e54d-6196-4c36-833d-2af048e0db30" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-27 19:50:55</date>
+      <author>qwdwq</author>
+      <email>ddd@email.com</email>
+      <country>au</country>
+      <ip>127.0.0.1</ip>
+      <website>http://cascasc.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>dvdsvsvdsvs</content>
+    </comment>
+    <comment id="cba7ea0f-02e2-4200-afc7-13be16837eef" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-27 19:52:05</date>
+      <author>casca</author>
+      <email>222@email.com</email>
+      <country>au</country>
+      <ip>127.0.0.1</ip>
+      <website>http://ascasc.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>xxqwxqx</content>
+    </comment>
+    <comment id="7d3ff033-d2f7-4cdb-9796-db2127ef217e" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-27 19:57:37</date>
+      <author>eev</author>
+      <email>vwevw@email.com</email>
+      <country>au</country>
+      <ip>127.0.0.1</ip>
+      <website>http://dcsd.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>efefeff</content>
+    </comment>
+    <comment id="97630a38-061b-4f55-a45a-f20b1f3d1021" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-27 19:59:30</date>
+      <author>eeeee</author>
+      <email>eeee@email.com</email>
+      <country>au</country>
+      <ip>127.0.0.1</ip>
+      <website>http://sss.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>scaca</content>
+    </comment>
+  </comments>
+  <categories />
+  <notifications />
+</post>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>VS2010 RC bugs 2(two) that I reported in MS Connect</title>
+  <description />
+  <content>&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;1. VS2010 RC - The opened documents do not close (At first time VS loaded) when clicking on "Close All Documents" &lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;a href="https://connect.microsoft.com/VisualStudio/feedback/details/541954/vs2010-rc-the-open-documents-do-not-close-when-click-on-close-all-documents"&gt;&lt;span style="color: purple;"&gt;https://connect.microsoft.com/VisualStudio/feedback/details/541954/vs2010-rc-the-open-documents-do-not-close-when-click-on-close-all-documents&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;em&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;This will not be fixed in this release.&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Arial Unicode MS;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;2. Visual Studio crashes when importing the same Data Tip exported before&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;a href="https://connect.microsoft.com/VisualStudio/feedback/details/541676/visual-studio-crashes-when-importing-the-same-data-tip-exported-before"&gt;&lt;span style="color: purple;"&gt;https://connect.microsoft.com/VisualStudio/feedback/details/541676/visual-studio-crashes-when-importing-the-same-data-tip-exported-before&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;em&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman';"&gt;Status: Will be included as part of RTM Read Me.&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman';"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;16/4/2011&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;The DataTip issue has been fixed in VS2010&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 0pt;"&gt;&lt;a href="http://support.microsoft.com/kb/983509"&gt;http://support.microsoft.com/kb/983509&lt;/a&gt;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-04-09 21:19:00</pubDate>
+  <lastModified>2011-04-16 18:26:34</lastModified>
+  <raters>1</raters>
+  <rating>5</rating>
+  <slug>VS2010-RC-bugs-2(two)-that-I-reported-in-MS-Connect</slug>
+  <tags />
+  <comments>
+    <comment id="c551ad80-35e4-4c20-ab63-0a90000c733a" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-08 08:10:00</date>
+      <author>Raj Aththanayake's Blog</author>
+      <email>trackback</email>
+      <country />
+      <ip>203.89.228.50</ip>
+      <website>http://blog.rajsoftware.com/post/2010/05/19/VS2010-Undo-Close-Documents.aspx</website>
+      <content>VS2010 Undo Close Documents
+
+VS2010 Undo Close Documents</content>
+    </comment>
+  </comments>
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+    <category>471add28-78f8-42e9-9e2f-8e75b81406c7</category>
+    <category>fd41e292-56d9-4b00-85ad-dc53bbdaee74</category>
+  </categories>
+  <notifications />
+</post>

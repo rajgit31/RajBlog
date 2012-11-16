@@ -1,0 +1,25 @@
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\bin\Release\BlogEngine.Core.XML
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\bin\Release\BlogEngine.Core.dll
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\bin\Release\BlogEngine.Core.pdb
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\obj\Release\ResolveAssemblyReference.cache
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\obj\Release\BlogEngine.Core.dll
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\obj\Release\BlogEngine.Core.pdb
+C:\Documents and Settings\Raj\Desktop\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.XML
+C:\Documents and Settings\Raj\Desktop\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.dll
+C:\Documents and Settings\Raj\Desktop\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.pdb
+C:\Documents and Settings\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\BlogEngine.Core.dll
+C:\Documents and Settings\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\BlogEngine.Core.pdb
+C:\Documents and Settings\Raj\Desktop\Domain\MySite\BlogEngine\BlogEngine.Core\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raj\Desktop\Domain\MySite\BlogEngine\BlogEngine.Core\obj\Release\BlogEngine.Core.dll
+C:\Documents and Settings\Raj\Desktop\Domain\MySite\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.dll
+C:\Documents and Settings\Raj\Desktop\Domain\MySite\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.pdb
+C:\Documents and Settings\Raj\Desktop\Domain\MySite\BlogEngine\BlogEngine.Core\obj\Release\BlogEngine.Core.pdb
+C:\Documents and Settings\Raj\Desktop\Domain\MySite\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.XML
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.dll
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\bin\Release\BlogEngine.Core.pdb
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\BlogEngine.Core.dll
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\BlogEngine.Core.pdb
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\Decl\BlogEngine.Core.dll
+C:\Users\Raj\Desktop\BlogEngine\BlogEngine.Core\obj\Release\Decl\BlogEngine.Core.pdb

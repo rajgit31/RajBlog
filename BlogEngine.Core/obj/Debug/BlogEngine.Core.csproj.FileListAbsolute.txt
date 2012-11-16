@@ -1,0 +1,6 @@
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\bin\Debug\BlogEngine.Core.XML
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\bin\Debug\BlogEngine.Core.dll
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\bin\Debug\BlogEngine.Core.pdb
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\obj\Debug\BlogEngine.Core.dll
+C:\Data\Development\BlogEngine.NET\BlogEngine\DotNetSlave.BusinessLogic\obj\Debug\BlogEngine.Core.pdb

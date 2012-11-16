@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Tooling support for Unit Tests and TDD (Test Driven Development)</title>
+  <description />
+  <content>&lt;p&gt;&lt;span style="font-size: 12pt; font-family: &amp;quot;Times New Roman&amp;quot;; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;&lt;span style="font-family: Arial;"&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Here I will show some latest tools that used to assist Unit Testing and TDD.&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="font-size: medium;"&gt;&lt;strong&gt;VS2010 &amp;ldquo;Generate from Usage&amp;rdquo;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;This is a fantastic feature for developers who practice TDD. &lt;/span&gt;&lt;span class="apple-converted-space"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class="apple-style-span"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;You can generate new types and members without leaving your current location of the code. This minimizes the&amp;nbsp;interruption&amp;nbsp;on your TDD workflow. You can also specify the scope i.e private, protected, internal by selecting the 'New Type'.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/span&gt;&lt;img src="/image.axd?picture=2010%2f5%2fu.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="font-size: medium;"&gt;&lt;strong&gt;VS2010 IntelliSense Suggestion Mode&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: x-small; font-family: Arial;"&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;There are two types of IntelliSense modes in VS2010.&lt;/span&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Completion Mode &amp;ndash; Allows you to code faster when using predefined types.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Suggestion Mode &amp;ndash; Predefined types are not get inserted by default and allows you to create types before you define them.&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;(TDD Friendly)&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;For more information on IntelliSense&amp;nbsp;modes,&amp;nbsp;please refer to article on VS2010 quick start: &lt;a href="http://blog.rajsoftware.com/post/VS-2010-IDE-Enhancements-Quick-Start.aspx"&gt;&lt;span style="color: windowtext;"&gt;&lt;strong&gt;http://blog.rajsoftware.com/post/VS-2010-IDE-Enhancements-Quick-Start.aspx&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;Suggestion Mode is TDD friendly as it allows you to write classes before you define them.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f5%2fh.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span class="apple-style-span"&gt;&lt;strong&gt;&lt;span style="color: black; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;&lt;span style="font-size: medium;"&gt;ReSharper support nUnit and MSUnit&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span class="apple-style-span"&gt;&lt;span style="font-size: 10pt; color: black; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span class="apple-style-span"&gt;&lt;span style="font-size: 10pt; color: black; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;ReSharper has a Unit Test explorer. The speciality about this Unit Test explorer is that you can run combination of Unit Tests simultaneously in multiple sessions.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span class="apple-style-span"&gt;&lt;span style="font-size: 10pt; color: black; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;&lt;em&gt;Note: In debugging mode only one session can be run at a time.&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoBodyText2" style="margin: 0cm 0cm 0pt;"&gt;&lt;span class="apple-style-span"&gt;&lt;span style="font-size: x-small;"&gt;&lt;span style="font-family: Arial;"&gt;Also there is a profile called &amp;ldquo;Dot Trace&amp;rdquo; which can also be used to check the performance of the Unit Tests.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoBodyText2" style="margin: 0cm 0cm 0pt;"&gt;&lt;img src="/image.axd?picture=2010%2f5%2fq.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f5%2frr.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span class="apple-style-span"&gt;&lt;strong&gt;&lt;span style="color: black; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;&lt;span style="font-size: medium;"&gt;TestDriven.NET&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;span class="apple-style-span"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span class="apple-style-span"&gt;&lt;span style="font-size: 10pt; color: black; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;TestDriven.NET supports &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;NUnit, MbUnit and MSTest. You just need to right click on your test method and select &amp;ldquo;Run&amp;rdquo;.&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;For more information on TestDriven.NET please refer to &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;a href="http://testdriven.net/"&gt;&lt;span style="color: #800080;"&gt;http://testdriven.net/&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f5%2ftdd.jpg" alt="" /&gt;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-05-12 22:16:00</pubDate>
+  <lastModified>2010-08-21 12:42:19</lastModified>
+  <raters>1</raters>
+  <rating>5</rating>
+  <slug>Tooling-support-for-Unit-Tests-and-TDD-(Test-Driven-Development)</slug>
+  <tags />
+  <comments>
+    <comment id="0f806502-4c20-45e9-baf3-f9f2a3bb76bd" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-06-17 17:02:54</date>
+      <author>Currency Forex online Trading</author>
+      <email>oshat4all@yahoo.com</email>
+      <country>ae</country>
+      <ip>115.186.64.56</ip>
+      <website>http://www.fxcbs.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Hi there, I just wanted to say thanks for this informative post, can you please allow me to post it on my blog?</content>
+    </comment>
+    <comment id="57b91bba-ef97-401e-912a-5e5080b65508" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-09 01:28:43</date>
+      <author>Door Handles</author>
+      <email>oshat4all@yahoo.com</email>
+      <country>gb</country>
+      <ip>115.186.64.35</ip>
+      <website>http://www.tradehandles.co.uk/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Hello there, I enjoyed reading your post, thanks for this ……. I have noticed one in your pages, it takes so long to load </content>
+    </comment>
+    <comment id="e53325c5-c208-4609-ae98-7f33bc2300ec" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-19 17:50:03</date>
+      <author>Binary Options</author>
+      <email>cristino.algoria@gmail.com</email>
+      <country>us</country>
+      <ip>122.180.101.178</ip>
+      <website>http://www.bbinary.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>This is the good step u have taken. Thanks for writing this, its clear you have spent a good amount of time on your sites development.
+</content>
+    </comment>
+    <comment id="85379533-4a8a-4ced-8f8c-a40c93c20b10" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-08-03 17:53:08</date>
+      <author>ADDIO NUBILATO ROMA</author>
+      <email>tomy.algoria@gmail.com</email>
+      <country>it</country>
+      <ip>122.180.101.178</ip>
+      <website>http://www.romaexclusiveparty.com/organizzazione-eventi-roma/addio-al-nubilato-roma/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Your blog provides us a very great information. Its really very helpful to me to find result on search engine. Hope to hear more good information related to searching from your side.
+</content>
+    </comment>
+    <comment id="90534f4f-8da0-41f0-9787-a04ee97ba23c" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-08-07 00:00:02</date>
+      <author>Dubai Beach Apartments</author>
+      <email>oshat4all@yahoo.com</email>
+      <country>us</country>
+      <ip>115.186.65.48</ip>
+      <website>http://www.dubaibeachapartments.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I don’t know why your page takes so long to load, it took more than 2 minutes to load here ….. anyway, this was a nice read for me. Thanks</content>
+    </comment>
+    <comment id="066f8d89-9598-4399-ab60-d616552f4b7d" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-08-16 15:23:12</date>
+      <author>Dating Auckland</author>
+      <email>isisandosiris007@gmail.com</email>
+      <country>nz</country>
+      <ip>122.180.101.178</ip>
+      <website>http://www.isisandosiris.co.nz/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>you really have avery nice blog,it's the first time to be here but it won't be the last untill then keep blogging..goodluck</content>
+    </comment>
+    <comment id="2de610ff-c008-459e-bc0e-5abd124df916" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-08-27 13:34:51</date>
+      <author>bangkok flower</author>
+      <email>isneha.sharma@yahoo.com</email>
+      <country>hn</country>
+      <ip>116.71.41.103</ip>
+      <website>http://www.flowers2world.com/send_flowers_online/flowers_gifts_Bangkok.asp</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I suggest this site to my friends so it could be useful &amp;amp; informative for them also. Great effort.I love flowers...I am also interested to send flowers all over the world....</content>
+    </comment>
+    <comment id="864b7c2e-3501-422d-becd-afe08e875797" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-09-15 15:27:52</date>
+      <author>Send Flowers to Dubai</author>
+      <email>Neha.Shekar@yahoo.com</email>
+      <country>ae</country>
+      <ip>119.155.8.34</ip>
+      <website>http://www.flowers2world.com/send_flowers_online/flowers_gifts_australia.asp</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>I really liked your article. Keep up the good work.</content>
+    </comment>
+    <comment id="4599557d-c89d-41e5-805d-d5aec4554c51" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-09-21 15:53:50</date>
+      <author>Order Flowers online to UK</author>
+      <email>fariyalkhan95@yahoo.com</email>
+      <country>gb</country>
+      <ip>116.71.45.24</ip>
+      <website>http://www.flowersstore.co.uk/Order_Flowers_online_to_UK.asp</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>This is really fantastic and remarkable one</content>
+    </comment>
+    <comment id="e5b169f9-e127-4ba3-b3e4-e743291fe92e" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-09-30 15:17:56</date>
+      <author>nike air jordan</author>
+      <email>hwlonger1988@gmail.com</email>
+      <country>cn</country>
+      <ip>218.104.234.16</ip>
+      <website>http://www.discount-air-jordan.com/</website>
+      <moderatedby>Rule:black list</moderatedby>
+      <avatar />
+      <content>Day past all not quit, LongTianHe XiaoYue in this moment is more than 10 days, the dragon is XiaoYue from several times a day XiaoYue didn't promise, say what must we wait for my mom and dad actually awake, they also must dragon days when he woke up, the family because there are two days in the New Year, will certainly to have a family together, all with XiaoYue dragon days only in the waiting, the heavens also know oneself of dragon, parents must be immediately wake up, because their pa</content>
+    </comment>
+    <comment id="3ebf946e-1e28-4668-9e62-7bc7771c01f6" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-06 17:42:07</date>
+      <author>furnished office</author>
+      <email>servcorp.me@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.servcorp.me/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks for sharing this great article! I feel strongly about it and love learning more on this topic. It is extremely helpful for me. I hope you post again soon</content>
+    </comment>
+    <comment id="6cbb0a7b-c8e6-4d82-b5cb-4b8bdccc94e6" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-08 16:49:41</date>
+      <author>college basketball espn scores  </author>
+      <email>ericka@yahoo.com</email>
+      <country>us</country>
+      <ip>112.203.169.199</ip>
+      <website>http://www.universityloveconnection.com/blog/college-basketball-espn-scores-live-click-here-get-ranking-see-polls-2009-2010</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I had a great time reading your article and I found it interesting. 
+This is such a beautiful topic that my friends are talking about. Thanks 
+for this blog, we are enlightened.
+</content>
+    </comment>
+    <comment id="440e6f13-7822-4e9e-9389-7692f4a6eb0c" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-15 04:48:48</date>
+      <author>Jobs in Bahrain</author>
+      <email>s@allsaudijobs.com</email>
+      <country>us</country>
+      <ip>2.91.35.65</ip>
+      <website>http://jobsinbahrain.allsaudijobs.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Been a lot of time since I've hear from you, I'm ecstatic I finally found your blog. We should meet up again after I'm off with with this semester school things. I wish you read this comment, I didn't know where to make a post since you got no introduction post  Laughing.</content>
+    </comment>
+    <comment id="a9a1adeb-7581-4c33-8534-2a3638884e70" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-19 22:40:15</date>
+      <author>Chanel Borse</author>
+      <email>cristino.algoria@gmail.com</email>
+      <country>us</country>
+      <ip>122.177.201.90</ip>
+      <website>http://www.borse-louisvuitton.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Your blog keeps getting better and better! Your older articles are not as good as newer ones you have a lot more creativity and originality now keep it up!</content>
+    </comment>
+    <comment id="f7f61e8d-cf56-4909-b146-4940f9090fd8" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-19 22:40:45</date>
+      <author>Football shirts</author>
+      <email>tomy.algoria@gmail.com</email>
+      <country>us</country>
+      <ip>122.177.201.90</ip>
+      <website>http://www.soccerbox.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks for providing such important information. This is the awesome post. This is really knowledgeable post for all.
+</content>
+    </comment>
+    <comment id="ab6d1514-a1dc-48ae-bb5f-181e737358df" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-22 18:21:11</date>
+      <author>flower gift philippine</author>
+      <email>faizamalik39@yahoo.com</email>
+      <country>us</country>
+      <ip>116.71.9.124</ip>
+      <website>http://www.flowers-to-philippines.com/flower_gift_philippine.asp</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>I love when I have the opportunity to read blogs as interesting as this. really thanks and congratulations.</content>
+    </comment>
+    <comment id="a7f67e85-b1df-4ec6-8273-fcf2af35d1f4" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-26 18:21:52</date>
+      <author>Rent office</author>
+      <email>servcorp.me@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.servcorp.me/serviced-offices/offices.html</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks for sharing this great article! I feel strongly about it and love learning more on this topic. It is extremely helpful for me. I hope you post again soon</content>
+    </comment>
+    <comment id="5c92dc6c-f341-421e-a71d-e4821ed7c1a5" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-10-27 19:40:51</date>
+      <author>it managed support services</author>
+      <email>submission@aranix.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://aranix.com/additional-managed-services.html</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I like reading your articles. Post is very informative; it helped me with great information so I really believe you will do much better in the future.</content>
+    </comment>
+    <comment id="9f025dab-16cb-476b-b187-f2d3b5f8f945" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-01 20:08:06</date>
+      <author>Internet Marketing</author>
+      <email>jmsbond175@gmail.com</email>
+      <country>in</country>
+      <ip>122.177.192.231</ip>
+      <website>http://www.search-value.com/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>Wow nice information you have shared here.&amp;#160; Actually Google made searching of information easy on any topic. Well keep it up and post more interesting blogs
+</content>
+    </comment>
+    <comment id="1c3db17d-bd07-4c59-8837-8d679ea4efbc" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-09 17:05:31</date>
+      <author>Dubai hotel apartments</author>
+      <email>blogcommentz@gmail.com</email>
+      <country>ae</country>
+      <ip>125.209.123.134</ip>
+      <website>http://www.halconrealestate.com/dubai/short_stays_property.xhtml</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Nice post to hang on.. Nice informative article for the developers..</content>
+    </comment>
+    <comment id="18490b24-e55e-4f96-b795-2f383e1d9710" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-11 23:00:48</date>
+      <author>online options trading</author>
+      <email>sanjaychauhan400@gmail.com</email>
+      <country>in</country>
+      <ip>122.180.101.178</ip>
+      <website>http://www.bbinary.com/Options Trading Online</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I really appreciate your professional approach. These are pieces of very useful information that will be of great use for me in future.</content>
+    </comment>
+    <comment id="792d9193-7070-4891-ad34-559a7cc77063" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-11-19 15:17:03</date>
+      <author>Credit Report</author>
+      <email>ericka@yahoo.com</email>
+      <country>us</country>
+      <ip>112.210.141.2</ip>
+      <website>https://www.americancreditreport.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Great work! I admire the way you emphasized your beautiful ideas right here. Hope to hear more from you.
+</content>
+    </comment>
+    <comment id="c290074b-9344-4f44-867c-192ee8e63792" parentid="00000000-0000-0000-0000-000000000000" approved="False">
+      <date>2010-12-01 16:07:49</date>
+      <author>louis vuitton</author>
+      <email>meirong75@gmail.com</email>
+      <country>cn</country>
+      <ip>120.32.69.80</ip>
+      <website>http://www.louisvuittonoutletstores2u.com/</website>
+      <moderatedby>Rule:black list</moderatedby>
+      <avatar />
+      <content>I'd like to read the articles in this website.May be you can go to &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt;,there will be some new and cheap louis vuitton products for choosen.You know &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt; didn't have the outlet store himself,but we provide the discount &amp;lt;a href=&amp;quot;http://www.louisvuittonoutletstores2u.com&amp;quot; title=&amp;quot;louis vuitton&amp;quot;&amp;gt;louis vuitton&amp;lt;/a&amp;gt; handbags,shoes,wallets,belts for Factory Direct price.So,enjoy yourself on our online shop.</content>
+    </comment>
+    <comment id="b3e8f7d0-1aad-4148-85ec-198f3d88b927" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-02 20:26:57</date>
+      <author>executive search software</author>
+      <email>socerbox@gmail.com</email>
+      <country>us</country>
+      <ip>122.177.180.108</ip>
+      <website>http://www.altamirahrm.com/en/products/altamira-recruiting/versions/altamira-r3</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I was very pleased to find this site. I wanted to thank you for this great read!! This is a very informative post, it helps me more</content>
+    </comment>
+    <comment id="0c6c3db6-c713-43ec-a305-48ffee4f63fe" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-06 21:17:44</date>
+      <author>Concrete Mix Design</author>
+      <email>jmsbond175@gmail.com</email>
+      <country>in</country>
+      <ip>122.177.139.195</ip>
+      <website>http://www.acchelp.in/standard-mix.asp</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thank you for this great information, you write very well which i like very much. I am really impressed by your post.</content>
+    </comment>
+  </comments>
+  <categories>
+    <category>fd41e292-56d9-4b00-85ad-dc53bbdaee74</category>
+    <category>12448c79-381f-4996-a557-1167a36eaf18</category>
+  </categories>
+  <notifications>
+    <email>isneha.sharma@yahoo.com</email>
+    <email>servcorp.me@gmail.com</email>
+    <email>submission@aranix.com</email>
+    <email>meirong75@gmail.com</email>
+  </notifications>
+</post>

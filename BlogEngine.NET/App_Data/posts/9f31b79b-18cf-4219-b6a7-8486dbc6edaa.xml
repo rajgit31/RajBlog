@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Useful Unit Testing Research Tools</title>
+  <description />
+  <content>&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-family: Arial;"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;&lt;span style="font-size: medium;"&gt;Microsoft Pex&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;A tool developed by &lt;em&gt;&lt;a href="http://research.microsoft.com/" target="_blank"&gt;&lt;span style="color: #800080;"&gt;Microsoft Research&lt;/span&gt;&lt;/a&gt;. &lt;/em&gt;It is an automated tool, which allows you to perform white-box type testing. Using Pex you can achieve higher code coverage. It also assists you with regression testing.&lt;/span&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You can download Pex from Microsoft Research. Pex is also included part of &lt;a href="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" target="_blank"&gt;&lt;span style="color: #800080;"&gt;VS2010 Power Tools&lt;/span&gt;&lt;/a&gt;.&lt;/span&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Pex will generate all the necessary inputs and outputs by looking at your method. Then you can generate Unit Tests and run them as required. I highly recommend for methods with complex algorithms. You can also use Pex with other Unit Test frameworks such as nUnit, xUnit.&lt;/span&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Pex allows you to create &lt;em&gt;&lt;span style="color: #333333;"&gt;Parameterized Unit Tests&lt;/span&gt;&lt;/em&gt;&lt;span style="color: #333333;"&gt;. When you download Pex, it comes with another tool called Moles, which allows you to replace any method with a delegate at test time.&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You can download &lt;a href="http://research.microsoft.com/pex" target="_blank"&gt;&lt;span style="color: #800080;"&gt;Pex&lt;/span&gt;&lt;/a&gt; from here.&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="font-size: 12pt; font-family: Arial; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;&lt;strong&gt;&lt;span style="font-size: medium;"&gt;CHESS&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Another useful tool developed by Microsoft Research, which allows you to find and reproduce bugs (Heisenbugs)&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;span style="font-size: 9pt; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="font-family: Arial;"&gt;in concurrent and multithreaded programs. CHESS supports testing both managed and unmanaged code.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;em&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;How CHESS track bugs?&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p class="MsoBodyText" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="font-family: Arial;"&gt;In a nutshell, CHESS repeatedly exercise/run each threads multiple times with different interleaving. If the interleaving result an error CHESS will allow you to debug the error.&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;[TestMethod]&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;[HostType(&amp;ldquo;Chess&amp;rdquo;)]&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;public void MyConcurrentThreadTestMethod()&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;{&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="mso-tab-count: 1;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&amp;hellip;&amp;hellip;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoBodyText" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You can make aware of your Unit Test that CHESS is integrated by just specifying the attribute, for example&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;CHESS allows you to locate the bug, reproduce it consistently, and then allow you to debug the issue.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 9pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;For more information or to download&amp;nbsp;CHESS please refer to the link &lt;a href="http://research.microsoft.com/en-us/projects/chess/" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-05-14 22:50:00</pubDate>
+  <lastModified>2010-12-10 18:26:47</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>Useful-Unit-Testing-Research-Tools</slug>
+  <tags />
+  <comments>
+    <comment id="57f22028-4744-4b3b-91ad-e530a14e2420" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-18 04:26:39</date>
+      <author>Forex Robot</author>
+      <email>abbyalice17@gmail.com</email>
+      <country>us</country>
+      <ip>115.167.11.156</ip>
+      <website>http://www.forexrobottrading.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>This is very great web tool and very useful for me.thanks.</content>
+    </comment>
+    <comment id="e2a5cf17-89c1-42f4-9d94-0230ca9a89d1" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-24 18:19:19</date>
+      <author>Simon</author>
+      <email>app@smply.com</email>
+      <country>au</country>
+      <ip>123.243.127.167</ip>
+      <website>http://rajsoftware.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks we use CHESS with VS2010?</content>
+    </comment>
+    <comment id="8de54886-5ca4-42e3-9383-8f9747cc7e4a" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-12-22 05:30:30</date>
+      <author>cheaphomeideas.com</author>
+      <email>pingback</email>
+      <country />
+      <ip>74.52.144.210</ip>
+      <website>http://cheaphomeideas.com/?p=9351</website>
+      <content>Pingback from cheaphomeideas.com
+
+How to Communicate With Your Employees Effectively | Cheaphomeideas.com</content>
+    </comment>
+  </comments>
+  <categories>
+    <category>fd41e292-56d9-4b00-85ad-dc53bbdaee74</category>
+    <category>12448c79-381f-4996-a557-1167a36eaf18</category>
+  </categories>
+  <notifications>
+    <email>raj@rajsoftware.com</email>
+    <email>isneha.sharma@yahoo.com</email>
+    <email>meirong75@gmail.com</email>
+  </notifications>
+</post>

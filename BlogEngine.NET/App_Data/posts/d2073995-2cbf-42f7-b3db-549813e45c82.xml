@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Working with Strings in C#.NET</title>
+  <description />
+  <content>&lt;p&gt;Strings, strings and strings. They are all over in your application. You cannot avoid them at all. This article is about some tips on how you should use strings within your application. Most developers know these tips, but I still see some developers write inefficient code.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;img src="/image.axd?picture=2010%2f5%2fGuitar_strings.jpg" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;Before we drill into much deeper, would you recommend using String over string? For example&amp;hellip;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;String apple;
+string apple;
+&lt;/pre&gt;
+&lt;p&gt;Not really, string is simply an alias (shorthand) for the Common Type System (CTS) System.String class, which represents a sequence of characters. You can use them interchangeably in your code. For example&amp;hellip;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;String x = string.Copy("x");
+string y = String.Copy("y");
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-size: small;"&gt;String concaternations &lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Often developer concatenate string using + operator. Some developer use StringBuilder class in System.Text namespace.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;string concat = "Apple" + ", " + "Orange";
+&lt;/pre&gt;
+&lt;pre class="brush: c-sharp;"&gt;StringBuilder sb = new StringBuilder();
+sb.Append("Apple");
+sb.Append(", ");
+sb.Append("Mango");
+&lt;/pre&gt;
+&lt;p&gt;So which one you should be using? It depends. For example if you have few strings that need to concatenate, then &amp;lsquo;+&amp;rsquo; operator would just be fine. However if you have so many of them, it is better to use the StringBuilder class. The reason is that direct string concatenation will always consume more memory as it creates String objects for every instance that it creates. On the other hand StringBuilder is a complex type, which require instantiating once (also take up a negligible start-up time), and Append method is much faster, better CPU and efficient memory usage. Because of the tiny start up cost of instantiating StringBuilder class, it is preferable to use &amp;lsquo;+&amp;rsquo; operators for when concatenating only few strings.&lt;/p&gt;
+&lt;p&gt;Below is an excellent article on string concatenations performances&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;The conclusion to be drawn from these test results is really very straightforward. You should be using the StringBuilder class for all but the most trivial string concatenation (or replace) operations. The extra effort required to use the StringBuilder class is negligible and is far outweighed by the potential performance and scalability benefits to be gained.&lt;/em&gt; &amp;rdquo;&lt;/p&gt;
+&lt;p&gt;More&amp;hellip;. &lt;a href="http://msdn.microsoft.com/en-us/library/aa302329.aspx"&gt;http://msdn.microsoft.com/en-us/library/aa302329.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Also avoid String.Format() for string concatenation. They are very useful for globalization and other tasks, however not meant to be used for appending strings to each other.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-size: small;"&gt;Empty Strings&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;string a = "";
+string c = String.Empty;
+&lt;/pre&gt;
+&lt;p&gt;There is no much performance differences on any of these. If you want the maximum efficiency and better use of CPU memory use String.Empty. String.Empty is a static and read only field. It does not create any object. Because when you use an empty string &amp;ldquo;&amp;rdquo;, it still creates a new object. If you are performing a string comparison with an empty string, for example...&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;if (testString == String.Empty)
+{
+     testString = "Test string is empty";
+}
+
+if (StringA.Equals(String.Empty))
+{ 
+     testString = "Test string is empty"; 
+}
+
+if (testString.Length == 0)
+{
+      testString = " Test string is empty";
+}
+&lt;/pre&gt;
+&lt;p&gt;Some of you would argue the lack of readabilty on Legth == 0, but the truth is the Length comparison is the most efficient. If you need to check for null or empty string then String.IsNullOrEmpty() is also better on performances.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-size: small;"&gt;Securing your strings &lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Common string classes in .NET framework store string in memory. If you are dealing with very sensitive data, then storing in memory is not the most secure way. For this you need to use SecureString class which is System.Secure name space.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;System.Security.SecureString secureString = new System.Security.SecureString();
+secureString.AppendChar('S');
+secureString.AppendChar('E');
+secureString.AppendChar('C');
+secureString.AppendChar('U');
+secureString.AppendChar('R');
+secureString.AppendChar('E');
+&lt;/pre&gt;
+&lt;p&gt;Unfortunately you cannot assign a string to the secure class. Please find more information on Secure String&amp;nbsp;below.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/system.security.securestring.aspx"&gt;http://msdn.microsoft.com/en-us/library/system.security.securestring.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="font-size: small;"&gt;Compare Strings &lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Many developers tend to use the case insensitivity to compare two strings. This is not really efficient when comparing two strings.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;if (testStringA.ToUpper() == testStringB.ToUpper())
+{
+     // Your code goes here
+}
+&lt;/pre&gt;
+&lt;p&gt;The regular expression engine in .NET is extremely good. but is not the most efficient method of simply comparing two strings. The below code is bit of a overkill.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;var pattern = "Regex pattern.";
+var string_value = "Hi! This is a test.";
+var b = Regex.IsMatch(string_value, pattern);
+Console.WriteLine("{0}", b);
+&lt;/pre&gt;
+&lt;p&gt;However there is a much efficient way to compare strings using String.Compare method.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;if (String.Compare(testStringA, testStringB, true) == 0)
+{
+      // Your code goes here
+}
+&lt;/pre&gt;
+&lt;p&gt;The below comparison does the same thing, but it is the most efficient.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;if (String.Equals(StringA, StringB, StringComparison.OrdinalIgnoreCase))
+{
+	// Your code goes here                
+}
+&lt;/pre&gt;
+&lt;p&gt;More information is on ordinal string comparison is below.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blogs.msdn.com/b/bclteam/archive/2007/05/31/string-compare-string-equals-josh-free.aspx"&gt;http://blogs.msdn.com/b/bclteam/archive/2007/05/31/string-compare-string-equals-josh-free.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;String Literals and String Constants&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I mentioned previously that string literals create a new string object. It doesn&amp;rsquo;t mean that you should not be using string literals at all. For example using string literals directly in your code assist readability of your code and have better performance than using string constants. Having said that if you have number of strings being used in you code over and over again, it is still better to define the string constants as the performance gain I mentioned above is not really significant. As you know changing strings in many places is often painful than declare it once, and use it wherever and wherever you want is lot easier.&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;private const string testString = "sampleString";
+StringA = testString;
+
+StringA = &amp;ldquo;sampleString&amp;rdquo; //efficient
+&lt;/pre&gt;
+&lt;p&gt;&lt;span style="font-size: x-small;"&gt;&lt;span style="FONT-SIZE: x-small; FONT-FAMILY: "&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: small;"&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The above are some of the examples that I tried by my self to prove better and efficient way of string manipulations. However there are many other string manipulations techniques which I haven&amp;rsquo;t mentioned here and worth trying. For example splitting strings, replacing strings, removing strings etc. It is very easy to check these operations, and all you need is micro-benchmarking fascilty. I use System.Diagnostics.Stopwatch class for benchmarking but there are other techniqes as well.&lt;/p&gt;
+&lt;p&gt;As a final note always be mindful when perform codding, and use these techinques so you would write efficient C# code.&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-05-30 09:19:00</pubDate>
+  <lastModified>2010-12-08 08:07:52</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>Working-with-Strings-in-CShapNET</slug>
+  <tags />
+  <comments>
+    <comment id="ea4ea952-3e34-436a-92fc-61b1a15acea2" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-30 10:37:59</date>
+      <author>Nick</author>
+      <email>appdfd@smply.com</email>
+      <country>us</country>
+      <ip>123.243.127.167</ip>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Hey Raj
+Great information. Very informative. Thanks a lot. Any chance you would add some more string manipulation performance considerations?</content>
+    </comment>
+    <comment id="eb2770dd-41fe-4c2c-ab75-4a697645daa0" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-30 16:54:23</date>
+      <author>Nick Josevski</author>
+      <email>nickjosevski@gmail.com</email>
+      <country>au</country>
+      <ip>122.108.100.38</ip>
+      <website>http://nickjosevski.wordpress.com/</website>
+      <moderatedby>StopForumSpam</moderatedby>
+      <avatar />
+      <content>Great stuff didn't know there was a secure string class. 
+
+I always just encrypted data myself. Will try find an effective use for it now :)</content>
+    </comment>
+    <comment id="f0535ed8-3475-4de2-9f54-48e10768389f" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-06-01 06:58:34</date>
+      <author>Noel</author>
+      <email>sapnoel@hotmail.com</email>
+      <country>gb</country>
+      <ip>123.243.127.167</ip>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>NIce article. I like to use StringBuilder almost every concatenation operation but never knew it has a start up cost which is significant when few strings get concatenated. Thanks for the info.</content>
+    </comment>
+  </comments>
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+    <category>471add28-78f8-42e9-9e2f-8e75b81406c7</category>
+    <category>fd41e292-56d9-4b00-85ad-dc53bbdaee74</category>
+  </categories>
+  <notifications>
+    <email>oshat4all@yahoo.com</email>
+  </notifications>
+</post>

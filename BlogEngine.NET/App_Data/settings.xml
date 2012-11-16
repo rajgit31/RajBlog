@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <numberofreferrerdays>1</numberofreferrerdays>
+  <showdescriptioninpostlist>False</showdescriptioninpostlist>
+  <authorname>My name</authorname>
+  <trackingscript />
+  <mobiletheme>Mobile</mobiletheme>
+  <blogrollvisibleposts>3</blogrollvisibleposts>
+  <dayscommentsareenabled>0</dayscommentsareenabled>
+  <descriptioncharacters>300</descriptioncharacters>
+  <searchbuttontext>Search</searchbuttontext>
+  <enablecontactattachments>True</enablecontactattachments>
+  <showlivepreview>True</showlivepreview>
+  <endorsement>http://www.dotnetblogengine.net/syndication.axd</endorsement>
+  <enabletrackbacksend>True</enabletrackbacksend>
+  <emailsubjectprefix>Weblog</emailsubjectprefix>
+  <smtpusername>username</smtpusername>
+  <enablessl>False</enablessl>
+  <enablerating>True</enablerating>
+  <commentsperpage>20</commentsperpage>
+  <contactthankmessage>&lt;h1&gt;Thank you&lt;/h1&gt;&lt;p&gt;The message was sent.&lt;/p&gt;</contactthankmessage>
+  <description>Articles on Web Development and Software Practices.</description>
+  <moderationtype>1</moderationtype>
+  <displaycommentsonrecentposts>True</displaycommentsonrecentposts>
+  <iscommentsenabled>True</iscommentsenabled>
+  <name>Raj Athtanayake's Blog</name>
+  <email>name@example.com</email>
+  <administratorrole>Administrators</administratorrole>
+  <descriptioncharactersforpostsbytagorcategory>0</descriptioncharactersforpostsbytagorcategory>
+  <sendmailoncomment>True</sendmailoncomment>
+  <showdescriptioninpostlistforpostsbytagorcategory>False</showdescriptioninpostlistforpostsbytagorcategory>
+  <commentwhitelistcount>1</commentwhitelistcount>
+  <htmlheader />
+  <postsperfeed>10</postsperfeed>
+  <useblognameinpagetitles>True</useblognameinpagetitles>
+  <enablepingbackreceive>True</enablepingbackreceive>
+  <enablehttpcompression>True</enablehttpcompression>
+  <numberofrecentposts>10</numberofrecentposts>
+  <enablecommentsmoderation>True</enablecommentsmoderation>
+  <enablerelatedposts>True</enablerelatedposts>
+  <smtpserverport>25</smtpserverport>
+  <blogrollupdateminutes>60</blogrollupdateminutes>
+  <requiresslmetaweblogapi>False</requiresslmetaweblogapi>
+  <enablepingbacksend>True</enablepingbacksend>
+  <enabletrackbackreceive>True</enabletrackbackreceive>
+  <avatar>wavatar</avatar>
+  <smtpserver>mail.example.com</smtpserver>
+  <theme>inove</theme>
+  <enableenclosures>False</enableenclosures>
+  <trustauthenticatedusers>True</trustauthenticatedusers>
+  <enableopensearch>True</enableopensearch>
+  <displayratingsonrecentposts>True</displayratingsonrecentposts>
+  <searchdefaulttext>Enter search term or APML url</searchdefaulttext>
+  <enablecommentsearch>True</enablecommentsearch>
+  <commentreportmistakes>False</commentreportmistakes>
+  <geocodinglatitude>0</geocodinglatitude>
+  <syndicationformat>Rss</syndicationformat>
+  <geocodinglongitude>0</geocodinglongitude>
+  <timezone>9</timezone>
+  <contactformmessage>&lt;p&gt;I'll answer the mail as soon as I can.&lt;/p&gt;</contactformmessage>
+  <enablereferrertracking>False</enablereferrertracking>
+  <showpostnavigation>True</showpostnavigation>
+  <searchcommentlabeltext>Include comments in search</searchcommentlabeltext>
+  <postsperpage>10</postsperpage>
+  <enablecountryincomments>True</enablecountryincomments>
+  <timestamppostlinks>False</timestamppostlinks>
+  <iscommentnestingenabled>True</iscommentnestingenabled>
+  <storagelocation>~/App_Data/</storagelocation>
+  <numberofrecentcomments>10</numberofrecentcomments>
+  <language>en-US</language>
+  <compresswebresource>True</compresswebresource>
+  <alternatefeedurl />
+  <commentblacklistcount>2</commentblacklistcount>
+  <culture>Auto</culture>
+  <removewhitespaceinstylesheets>True</removewhitespaceinstylesheets>
+  <handlewwwsubdomain />
+  <smtppassword>password</smtppassword>
+  <fileextension>.aspx</fileextension>
+  <iscocommentenabled>False</iscocommentenabled>
+  <enableerrorlogging>False</enableerrorlogging>
+  <blogrollmaxlength>23</blogrollmaxlength>
+</settings>

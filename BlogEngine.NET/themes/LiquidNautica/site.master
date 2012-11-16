@@ -1,0 +1,60 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="LiquidNauticaSite" %>
+
+<%@ Import Namespace="BlogEngine.Core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head runat="server" profile="http://gmpg.org/xfn/11">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="liquidnautica.css" type="text/css" />
+    <link rel="shortcut icon" href="~/pics/blogengine.ico" type="image/x-icon"/>
+</head>
+<body>
+    <div id="wrapper-menu-top">
+        <div id="menu-top">
+            <ul>
+                <li><a href="<%=Utils.AbsoluteWebRoot%>" title="<%=Resources.labels.home %>"><span><%=Resources.labels.home %></span></a></li>
+                <li><a href="<%=Utils.AbsoluteWebRoot%>page/About-me.aspx" title="<%=Resources.labels.aboutMe %>"><span><%=Resources.labels.aboutMe %></span></a></li>
+                <li><a href="<%=Utils.AbsoluteWebRoot%>Archive.aspx" title="<%=Resources.labels.archive %>"><span><%=Resources.labels.archive %></span></a></li>
+                <li><a href="<%=Utils.FeedUrl%>" title="<%=Resources.labels.subscribe%>"><span><%=Resources.labels.subscribe%></span></a></li>
+                <li><a href="<%=Utils.AbsoluteWebRoot%>Contact.aspx" title="<%=Resources.labels.contact %>"><span><%=Resources.labels.contact %></span></a></li>
+                <li><a id="aLogin" runat="server"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrapper-header">
+        <div id="header">
+            <div id="wrapper-header2">
+                <div id="wrapper-header3">
+                    <h1>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper-content">
+        <asp:ContentPlaceHolder ID="NavPlaceHolder" runat="server">
+            <div id="wrapper-menu-page">
+                <div id="menu-page">
+                    <blog:WidgetZone runat="server" ID="rightzone" />
+                </div>
+            </div>
+        </asp:ContentPlaceHolder>
+        <form id="Form1" runat="Server" class="body">
+        <div id="content">
+            <blog:SearchOnSearch ID="SearchOnSearch1" runat="server" MaxResults="3" Headline="You searched for"
+                Text="Here are some results for the search term on this website" />
+            <asp:ContentPlaceHolder ID="cphBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+    </div>
+    <div id="wrapper-footer">
+        <div id="footer">
+            Design by <a href="http://www.studio7designs.com">studio7designs</a> | Panoramas
+            &copy; <a href="http://ryanoneill.com">Ryan O'Neill</a> | themed for BlogEngine.Net
+            by <a href="http://ryanoneill.com">Ryan O'Neill</a> | Powered by <a href="http://www.dotnetblogengine.net">
+                BlogEngine.NET</a>
+            <%=BlogSettings.Instance.Version() %></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Tips for converting VB.NET to C#</title>
+  <description />
+  <content>&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;As soon as anyone sees this title, most of you would think, &amp;lsquo;Ah..that&amp;rsquo;s easy, use a tool and it will do the job for you&amp;rsquo;. Recently I have been given a small task to convert some VB.NET code to C#. I&amp;rsquo;m not good at writing VB.NET so this was a challenge.&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;As any other C# developer, I decided to use a conversion tool. I copied and paste the VB.NET code I needed to translate into C#.NET. &lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt;"&gt;Another approach would be to use the Refactor. If you can include this function in an assembly you can easily view the C# equivalent of the code using Refactor.&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt; I got it translated using a conversion tool. However I saw the translated code was bit confusing. Which also bring me to the next topic that you should not blindly translate your VB.NET code to C#.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"&gt;Take a look at this example. &lt;/span&gt;&lt;/p&gt;
+&lt;pre class="brush:vbnet;"&gt;VB.NET
+Public Function GetAppGUID(ByVal sectionId As String) As String 
+ 
+    Dim hexString As String = Nothing 
+    Dim i As Integer 
+    Dim guidlen As Integer 
+ 
+    guidlen = 16 
+ 
+    If sectionId.Length &amp;lt; guidlen Then 
+        sectionId = sectionId &amp;amp; New String(" ".Chars(0), guidlen - sectionId.Length) 
+    End If 
+ 
+    For i = 1 To guidlen 
+        hexString = hexString &amp;amp; Hex(Asc(Mid(sectionId, i, 1))) 
+    Next 
+ 
+    GetAppGUID = hexString 
+ 
+End Function
+&lt;/pre&gt;
+&lt;pre class="brush: c-sharp;"&gt;C#
+public string GetAppGUID(string sectionId) 
+{
+          
+	    
+	string hexString = null; 
+	int i = 0; 
+	int guidlen = 0; 
+	    
+	guidlen = 16; 
+	    
+	if (sectionId.Length &amp;lt; guidlen) { 
+	        sectionId = sectionId + new string(" ".Chars(0), guidlen - sectionId.Length); 
+	} 
+	    
+	for (i = 1; i &amp;lt;= guidlen; i++) { 
+	     hexString = hexString + Conversion.Hex(Strings.Asc(Strings.Mid(sectionId, i, 1))); 
+	} 
+	    
+	        
+	return hexString; 
+}
+
+&lt;/pre&gt;
+&lt;p&gt;As you can see the converted function require Microsoft.VisualBasic.dll for &lt;em&gt;Conversion&lt;/em&gt; and &lt;em&gt;Asc&lt;/em&gt; functions. In some cases yes you would use this dll but most of the time you don&amp;rsquo;t have to. You can easily write this function in C# using same line of code but not using Microsoft.VisualBasic.dll&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;private string GetAppGUID(string sectionId) 
+    { 
+        string hexString = null; 
+        int i = 0; 
+        int guidLength = 0; 
+ 
+        guidLength = 16; 
+ 
+        if (sectionId.Length &amp;lt; guidLength) 
+        { 
+            sectionId = sectionId + new string(" "[0], guidLength - sectionId.Length); 
+        } 
+ 
+        foreach (char c in sectionId) 
+        { 
+            int tmp = c; 
+            hexString += String.Format("{0:x2}", (uint)System.Convert.ToUInt32(tmp.ToString())) 
+        } 
+ 
+        return hexString; 
+    }  
+&lt;/pre&gt;
+&lt;p&gt;So this is my opinion.&lt;/p&gt;
+&lt;p&gt;a. If you ever have to convert VB.NET to C#,&amp;nbsp;you may use a conversion tool&amp;nbsp;or Reflector but make sure you are not blindly converting the code.&lt;/p&gt;
+&lt;p&gt;b. If the converted code require Microsoft.VisualBasic.dll, then try to avoid this dll.&amp;nbsp;Refactor your code to use the equivalent C# syntax. To include a completely different dll in your C# project for just a small method/syntax change is not really worth it.&lt;/p&gt;
+&lt;p&gt;c. Don&amp;rsquo;t take your task as &amp;ldquo;hell this is not the language I&amp;rsquo;m familiar with&amp;rdquo;. See this opportunity&amp;nbsp;is an excellent way to learn another language. It is quite common in the industry that you get to do these types of tasks often. Which also prove you are an all-rounded developer,&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-05-28 23:19:00</pubDate>
+  <lastModified>2010-05-29 20:18:30</lastModified>
+  <raters>1</raters>
+  <rating>5</rating>
+  <slug>Tips-when-converting-VBNET-to-C</slug>
+  <tags />
+  <comments>
+    <comment id="85be1050-bd37-4dfc-b2b5-25166280f7ce" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-28 23:49:37</date>
+      <author>Solomon</author>
+      <email>app@smply.com</email>
+      <country>au</country>
+      <ip>123.243.127.167</ip>
+      <website>http://rajsoftware.com/</website>
+      <moderatedby>Rule:authenticated</moderatedby>
+      <avatar />
+      <content>Great info. Never thought you could use Reflector for this. I like your tips. Thanks alot for the post.</content>
+    </comment>
+    <comment id="b90e59e6-f6db-4bde-a729-4c5ebfa6449b" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-29 08:05:45</date>
+      <author>Abdul</author>
+      <email>appdfd@smply.com</email>
+      <country>br</country>
+      <ip>123.243.127.167</ip>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Hi 
+I'm a VB.NET developer. Your points can also apply when converting from VB.NET to C# I guess. Thanks appreciated.
+</content>
+    </comment>
+    <comment id="eef2e1d7-f06e-4eb2-8ce8-6c3a7b85e6da" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-29 20:23:03</date>
+      <author>Sam</author>
+      <email>shanigmg@yahoo.com</email>
+      <country>au</country>
+      <ip>123.243.127.167</ip>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Thanks for the tips. It is really useful. I do these type of tasks all the time but never knew that I could use Reflector.</content>
+    </comment>
+    <comment id="30982d91-6ee2-4ef8-9e86-3ff25316aa48" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-05-29 23:33:53</date>
+      <author>Business Plan Company</author>
+      <email>micheal.walmort@gmail.com</email>
+      <country>gb</country>
+      <ip>119.152.112.24</ip>
+      <website>http://www.canadabusinessplans.org/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>I am gald that you have shared this programming on your blog.I was looking for it.I hope you will post more informative blogs.</content>
+    </comment>
+    <comment id="2e944529-1fbb-410c-b85a-63b4ecf98a21" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-06-07 22:35:25</date>
+      <author>Alan</author>
+      <email>lana24@hotmail.com</email>
+      <country>vn</country>
+      <ip>123.243.127.167</ip>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Nice post. Thanks.</content>
+    </comment>
+    <comment id="c51b49d9-c3ad-4856-98e4-f8160e518c9f" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-06-17 17:01:49</date>
+      <author>Handles</author>
+      <email>oshat4all@yahoo.com</email>
+      <country>gb</country>
+      <ip>115.186.64.56</ip>
+      <website>http://designerhandle.co.uk/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>My friend suggested me to visit your blog. Very well explained. I would like to say that it is very interesting to read your blog.</content>
+    </comment>
+    <comment id="e454accb-a648-4050-80c9-c5b0bfd9cd97" parentid="00000000-0000-0000-0000-000000000000" approved="True">
+      <date>2010-07-22 23:51:20</date>
+      <author>Furnished Apartments in Dubai</author>
+      <email>oshat4all@yahoo.com</email>
+      <country>us</country>
+      <ip>115.186.67.169</ip>
+      <website>http://www.dubaifurnishedapartment.com/</website>
+      <moderatedby>Rule:white list</moderatedby>
+      <avatar />
+      <content>Hi there, I just wanted to say thanks for this informative post, can you please allow me to post it on my blog?</content>
+    </comment>
+  </comments>
+  <categories />
+  <notifications />
+</post>

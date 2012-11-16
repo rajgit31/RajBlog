@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Debugging, Visualizing and Querying data using LINQ</title>
+  <description />
+  <content>&lt;p class="MsoBodyText" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: x-small; font-family: Arial;"&gt;&lt;span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-AU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"&gt;One of the challenging things that I have confronted in my day-to-day work is writing complex LINQ queries. I&amp;rsquo;m sure there are lot of developers out there who have experienced the same when writing complex LINQ queries. This is a simple article to assist for those developers to debug, visualize and query using LINQ to SQL. &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Those who new to LINQ to SQL, it is &lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;a database development model in the context of an Object Oriented Programming Model. LINQ is a broad topic. If you need to know more about LINQ, there lots of great articles in the web including some excellent sources from MSDN. &lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;.NET Framework 4.0 has also made significant enhancements to its LINQ model. This includes improvements to areas such as performances, query stabality, usability, LINQ to SQL class designer and much more. You can find some of those improvement by clicking&amp;nbsp;&lt;a href="http://damieng.com/blog/2009/06/01/linq-to-sql-changes-in-net-40" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;LINQ to SQL translates the queries you write into parameterized SQL queries (in text form) and send them to the SQL server for processing. Sometimes debugging LINQ queries can be problematic. If you want to know more about debugging LINQ queries please refer to this &lt;a href="http://blogs.msdn.com/ericwhite/archive/2008/11/07/debugging-linq-queries.aspx" target="_blank"&gt;article&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;There are other ways to output LINQ to SQL queries so you can see the entire query that get executed. For example you can output to a debug window, file, or to a memory. Some examples are described in the below articles.&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;&lt;a href="http://damieng.com/blog/2008/07/30/linq-to-sql-log-to-debug-window-file-memory-or-multiple-writers" target="_blank"&gt;LINQ to SQL log to debug window.&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;&lt;a href="http://www.codesprouts.com/post/View-LINQ-To-SQL-Statements-Using-A-Debug-TextWriter.aspx" target="_blank"&gt;View LINQ to SQL.&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;VS2010 has a &lt;em&gt;Historical Debugger&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;&lt;/em&gt;which can also be used to view and debug LINQ queries. For more information on this please click &lt;a href="http://blogs.msdn.com/habibh/archive/2009/07/14/debugging-linq-to-sql-queries-using-the-historical-debugger.aspx" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;em&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: small;"&gt;&lt;span style="font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;strong&gt;Debug Visualisers&lt;/strong&gt;&lt;/span&gt;&lt;span style="font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;LINQ to SQL Debug Visualizer enables you to view and execute the LINQ queries on the fly. It was&amp;nbsp;part of the beta releases of VS2008.&amp;nbsp;However for some reason MS has dropped it from the RTM release. I cannot see this is integrated into VS2010 either. It is a separate download. You can download it from &lt;a href="http://www.scottgu.com/blogposts/linqquery/SqlServerQueryVisualizer.zip" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;Take a look at this &lt;a href="http://weblogs.asp.net/scottgu/archive/2007/07/31/linq-to-sql-debug-visualizer.aspx" target="_blank"&gt;article&lt;/a&gt; on LINQ to SQL Debug Visualizer, which explains how it is integrated and used within Visual Studio.&amp;nbsp;&lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;LINQ to SQL Debug Visualizer has its own limitations.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;For example it does not diplay the complete query. It is hard to edit and execute while debugging. This &lt;a href="http://davidhayden.com/blog/dave/archive/2007/08/17/LINQToSQLDebuggerVisualizerVisualStudio2008HasLimitedValueLINQToSQLTutorials.aspx" target="_blank"&gt;article&lt;/a&gt; discribe some of limitations.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 7.5pt; mso-ansi-language: EN;" lang="EN"&gt;There is another similar tool that you can download from VS Gallary. This tool should work with any database as well as MS SQL. You can find more information by clicking &lt;a href="http://visualstudiogallery.msdn.microsoft.com/en-us/99468ece-689b-481c-868c-19e00e0a4e69" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&lt;strong&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;strong&gt;&lt;span style="font-size: small;"&gt;LINQPad&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;I think this is an excellent tool to write and test your LINQ queries. &lt;/span&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-ansi-language: EN;" lang="EN"&gt;It is a great tool to help you build any type of queries with LINQ. Standard edition is free and I recon every developer should have it. You save lot of time by having these tools which allows you to be more productive when writng queries.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/image.axd?picture=2010%2f4%2fLINQP.png" alt="" /&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt; mso-ansi-language: EN;" lang="EN"&gt;You can also connect to a SQL Server DB (Express or Compact Edition) and with a connection to your LINQ Data component (if you have built one) you can perform queries right against your data with LINQ &amp;ndash; that&amp;rsquo;s excellent!&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;The standard edition is free to download and it supports .NET 4.0 as well. Standard edition does not have the &lt;em&gt;Autocompletion&lt;/em&gt; feature.&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;For more information on Autocompletion please click &lt;a href="http://www.linqpad.net/Purchase.aspx" target="_blank"&gt;here&lt;/a&gt;.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;There is also a great &lt;a href="http://oreilly.com/pub/e/1295" target="_blank"&gt;webcast&lt;/a&gt; that explains the new features of LINQPad with respect to the Entity framework.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&lt;a href="http://oreilly.com/pub/e/1295"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;More importantly it is a great tool to learn and improve your skills on LINQ to SQL.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0cm 0cm 0pt;"&gt;&lt;span style="font-size: 10pt; font-family: Arial; mso-bidi-font-size: 12.0pt;"&gt;You can download this tool&amp;nbsp;by clicking &lt;a href="http://www.linqpad.net/" target="_blank"&gt;here&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>False</iscommentsenabled>
+  <pubDate>2010-04-29 19:14:00</pubDate>
+  <lastModified>2010-06-24 00:15:01</lastModified>
+  <raters>2</raters>
+  <rating>5</rating>
+  <slug>Debugging-Visualizing-and-Querying-data-using-LINQ</slug>
+  <tags />
+  <comments />
+  <categories>
+    <category>6e852331-990d-45ba-8068-1c6e8396a0cf</category>
+    <category>471add28-78f8-42e9-9e2f-8e75b81406c7</category>
+  </categories>
+  <notifications>
+    <email>oshat4all@yahoo.com</email>
+  </notifications>
+</post>

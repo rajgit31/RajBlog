@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<post>
+  <author>rajitha_kba</author>
+  <title>Why you should consider using xUnit</title>
+  <description />
+  <content>&lt;!--  /* Font Definitions */  @font-face 	{font-family:Calibri; 	panose-1:2 15 5 2 2 2 4 3 2 4; 	mso-font-charset:0; 	mso-generic-font-family:swiss; 	mso-font-pitch:variable; 	mso-font-signature:-520092929 1073786111 9 0 415 0;} @font-face 	{font-family:"Segoe UI"; 	panose-1:2 11 5 2 4 2 4 2 2 3; 	mso-font-charset:0; 	mso-generic-font-family:swiss; 	mso-font-pitch:variable; 	mso-font-signature:-520084737 -1073683329 41 0 479 0;} @font-face 	{font-family:Consolas; 	panose-1:2 11 6 9 2 2 4 3 2 4; 	mso-font-charset:0; 	mso-generic-font-family:modern; 	mso-font-pitch:fixed; 	mso-font-signature:-520092929 1073806591 9 0 415 0;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-parent:""; 	margin-top:0cm; 	margin-right:0cm; 	margin-bottom:10.0pt; 	margin-left:0cm; 	line-height:115%; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:Calibri; 	mso-fareast-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} a:link, span.MsoHyperlink 	{mso-style-noshow:yes; 	mso-style-priority:99; 	color:blue; 	text-decoration:underline; 	text-underline:single;} a:visited, span.MsoHyperlinkFollowed 	{mso-style-noshow:yes; 	mso-style-priority:99; 	color:purple; 	mso-themecolor:followedhyperlink; 	text-decoration:underline; 	text-underline:single;} pre 	{mso-style-noshow:yes; 	mso-style-priority:99; 	mso-style-link:"HTML Preformatted Char"; 	margin:0cm; 	margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Courier New"; 	mso-fareast-font-family:"Times New Roman";} p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph 	{mso-style-priority:34; 	mso-style-unhide:no; 	mso-style-qformat:yes; 	margin-top:0cm; 	margin-right:0cm; 	margin-bottom:10.0pt; 	margin-left:36.0pt; 	mso-add-space:auto; 	line-height:115%; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:Calibri; 	mso-fareast-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst 	{mso-style-priority:34; 	mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-type:export-only; 	margin-top:0cm; 	margin-right:0cm; 	margin-bottom:0cm; 	margin-left:36.0pt; 	margin-bottom:.0001pt; 	mso-add-space:auto; 	line-height:115%; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:Calibri; 	mso-fareast-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle 	{mso-style-priority:34; 	mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-type:export-only; 	margin-top:0cm; 	margin-right:0cm; 	margin-bottom:0cm; 	margin-left:36.0pt; 	margin-bottom:.0001pt; 	mso-add-space:auto; 	line-height:115%; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:Calibri; 	mso-fareast-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast 	{mso-style-priority:34; 	mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-type:export-only; 	margin-top:0cm; 	margin-right:0cm; 	margin-bottom:10.0pt; 	margin-left:36.0pt; 	mso-add-space:auto; 	line-height:115%; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:Calibri; 	mso-fareast-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} span.HTMLPreformattedChar 	{mso-style-name:"HTML Preformatted Char"; 	mso-style-noshow:yes; 	mso-style-priority:99; 	mso-style-unhide:no; 	mso-style-locked:yes; 	mso-style-link:"HTML Preformatted"; 	mso-ansi-font-size:10.0pt; 	mso-bidi-font-size:10.0pt; 	font-family:"Courier New"; 	mso-ascii-font-family:"Courier New"; 	mso-fareast-font-family:"Times New Roman"; 	mso-hansi-font-family:"Courier New"; 	mso-bidi-font-family:"Courier New"; 	mso-fareast-language:EN-AU;} span.apple-style-span 	{mso-style-name:apple-style-span; 	mso-style-unhide:no;} span.apple-converted-space 	{mso-style-name:apple-converted-space; 	mso-style-unhide:no;} span.codeinline 	{mso-style-name:codeinline; 	mso-style-unhide:no;} span.SpellE 	{mso-style-name:""; 	mso-spl-e:yes;} span.GramE 	{mso-style-name:""; 	mso-gram-e:yes;} .MsoChpDefault 	{mso-style-type:export-only; 	mso-default-props:yes; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-fareast-font-family:Calibri; 	mso-fareast-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} .MsoPapDefault 	{mso-style-type:export-only; 	margin-bottom:10.0pt; 	line-height:115%;} @page WordSection1 	{size:595.3pt 841.9pt; 	margin:72.0pt 72.0pt 72.0pt 72.0pt; 	mso-header-margin:35.4pt; 	mso-footer-margin:35.4pt; 	mso-paper-source:0;} div.WordSection1 	{page:WordSection1;}  /* List Definitions */  @list l0 	{mso-list-id:389153088; 	mso-list-type:hybrid; 	mso-list-template-ids:609254240 201916441 201916441 201916443 201916431 201916441 201916443 201916431 201916441 201916443;} @list l0:level1 	{mso-level-number-format:alpha-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:left; 	text-indent:-18.0pt;} @list l0:level2 	{mso-level-number-format:alpha-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:left; 	text-indent:-18.0pt;} @list l0:level3 	{mso-level-number-format:roman-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:right; 	text-indent:-9.0pt;} @list l0:level4 	{mso-level-tab-stop:none; 	mso-level-number-position:left; 	text-indent:-18.0pt;} @list l0:level5 	{mso-level-number-format:alpha-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:left; 	text-indent:-18.0pt;} @list l0:level6 	{mso-level-number-format:roman-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:right; 	text-indent:-9.0pt;} @list l0:level7 	{mso-level-tab-stop:none; 	mso-level-number-position:left; 	text-indent:-18.0pt;} @list l0:level8 	{mso-level-number-format:alpha-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:left; 	text-indent:-18.0pt;} @list l0:level9 	{mso-level-number-format:roman-lower; 	mso-level-tab-stop:none; 	mso-level-number-position:right; 	text-indent:-9.0pt;} ol 	{margin-bottom:0cm;} ul 	{margin-bottom:0cm;} --&gt; &lt;!--[if gte mso 10]&gt; &lt;mce:style&gt;&lt;!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-priority:99; 	mso-style-parent:""; 	mso-padding-alt:0cm 5.4pt 0cm 5.4pt; 	mso-para-margin-top:0cm; 	mso-para-margin-right:0cm; 	mso-para-margin-bottom:10.0pt; 	mso-para-margin-left:0cm; 	line-height:115%; 	mso-pagination:widow-orphan; 	font-size:11.0pt; 	font-family:"Calibri","sans-serif"; 	mso-ascii-font-family:Calibri; 	mso-ascii-theme-font:minor-latin; 	mso-hansi-font-family:Calibri; 	mso-hansi-theme-font:minor-latin; 	mso-bidi-font-family:"Times New Roman"; 	mso-bidi-theme-font:minor-bidi; 	mso-fareast-language:EN-US;} --&gt; &lt;!--[if gte mso 9]&gt;&lt;xml&gt; &lt;o:shapedefaults v:ext="edit" spidmax="1026" /&gt; &lt;/xml&gt;&lt;![endif]--&gt;&lt;!--[if gte mso 9]&gt;&lt;xml&gt; &lt;o:shapelayout v:ext="edit"&gt; &lt;o:idmap v:ext="edit" data="1" /&gt; &lt;/o:shapelayout&gt;&lt;/xml&gt;&lt;![endif]--&gt;
+&lt;div class="WordSection1"&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: medium;"&gt;&lt;span style="font-size: 16px; line-height: 18px;"&gt; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;Recently I have been using the xUnit Testing framework and I would like to share few of its nice features with you. It is simple, easily extensible and aligned with practices such as TDD (Test Driven Development) and BDD (Behaviour Driven Development).&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;Test attributes&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;xUnit does not require an attribute for a test class. It looks for all test methods in all public classes in the assembly. The [Fact] attribute defines whether the public method should be included as a Test method or not. &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;If you are already familiar with NUnit or MBUnit, you probably know the [Setup] attribute. If you use MSTest then you also probably know the [TestInitialize] attribute. These attributes allow you to specify the code to be run before executing each test. xUnit doesn&amp;rsquo;t have this attribute and you can simply use the &lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;parameterless constructor as a direct replacement. &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;Similarly, xUnit does not specify attributes such as [TestCleanup] or [Teadown], and instead you would use the IDisposable.Dipose() method to clean up the resource(s) when required. &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;Personally, I see this as a much cleaner way to write Unit Tests since there is less code, less maintenance therefore less refactoring.&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;From xUnit team&amp;hellip;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&lt;/span&gt;&amp;ldquo;&lt;em style="mso-bidi-font-style: normal;"&gt;The xUnit.net team feels that per-test setup and teardown creates difficult-to-follow and debug testing code, often causing unnecessary code to run before every single test is run.&lt;/em&gt;&amp;rdquo;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-family: mceinline; color: #30332d; font-size: x-large;"&gt;&lt;span style="font-size: 19px; line-height: 21px;"&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;strong&gt;
+&lt;p class="MsoNormal"&gt;&lt;span&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Ignore Tests&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/strong&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;One of the nice features of xUnit is that the [Skip] attribute also accepts an argument so you can specify the reason for your exclusion for the test method. All other major Unit Testing frameworks allow you to use an [Ignore] attribute, but you cannot specify the reason of why it has been ignored/skipped.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class="brush: c-sharp;"&gt;[Fact(Skip = "This test require refactoring.")]
+public void AssertAreEqual()
+{
+//Your test goes here.
+}&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span style="font-family: mceinline; color: #30332d; font-size: x-large;"&gt;&lt;span style="font-size: 19px;"&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+&lt;p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Asserts&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: Arial, sans-serif; font-size: 16px; color: #30332d; line-height: 18px;"&gt;Most xUnit Assert methods don&amp;rsquo;t have the message as an argument to the Assert methods. xUnit team believes the Asserts API should be descriptive enough except the True/False Asserts. For example Assert.Equal(&amp;ldquo;Pat&amp;rdquo;, value, "Value should have been Pat") doesn't add much value.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-layout-grid-align: none; text-autospace: none;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;Data driven or parameterized Unit Tests&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: Arial, sans-serif; font-size: 16px;"&gt;xUnit also supports data driven and parameterized Unit Tests. For example you can configure your test inputs within the attribute and specify them as an argument to your test method. You can specify parameters to be injected to the test method by specifying the [Theory] and [InlineData]. xUnit support variety of data providers including [&lt;span class="codeinline"&gt;&lt;span style="color: #30332d;"&gt;ExcelData&lt;/span&gt;&lt;/span&gt;], &lt;span style="color: #30332d;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="codeinline"&gt;&lt;span style="color: #30332d;"&gt;[SqlServerData]&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #30332d;"&gt;, and&lt;/span&gt;&lt;span style="color: #30332d;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="codeinline"&gt;&lt;span style="color: #30332d;"&gt;[OleDbData].&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;[Theory]
+[InlineData("hello", 5)]
+public void TestTraditional(string value, int expectedLength)
+{
+      Assert.Equal(expectedLength, value.Length);
+}
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Please note that you must use the &lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #333333;"&gt;xunit.extensions.dll&lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #333333;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt; in order to use &lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;data driven or parameterized Unit Tests.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-family: mceinline; color: #30332d; font-size: x-large;"&gt;&lt;span style="font-size: 19px; line-height: 21px;"&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+&lt;p class="MsoNormal"&gt;&lt;span&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Extending xUnit framework&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: Arial, sans-serif; font-size: 16px; color: #30332d; line-height: 18px;"&gt;One of the great things about using xUnit is that it is heavily extensible. You may extend the Test Class, Test Method, or even Asserts. Below is an example of how you would create a Trace attribute to trace your Unit Tests.&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="brush: c-sharp;"&gt;    public class BeforeAfterTests
+    {
+        [Fact, Tracing]
+        public void AssertAreEqual()
+        {
+            Console.WriteLine("I'm inside the test!");
+        }
+    }
+
+
+    public class TracingAttribute : BeforeAfterTestAttribute
+    {
+        public override void Before(MethodInfo methodUnderTest)
+        {
+            Console.WriteLine("Before : {0}.{1}", methodUnderTest.DeclaringType.FullName, methodUnderTest.Name);
+        }
+
+        public override void After(MethodInfo methodUnderTest)
+        {
+            Console.WriteLine("After : {0}.{1}", methodUnderTest.DeclaringType.FullName, methodUnderTest.Name);
+        }
+    }
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+&lt;p class="MsoNormal" style="display: inline !important;"&gt;&lt;span&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;VS Integration&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #44444d;"&gt;For a better VS.Net integration there are some other test runners you can use.&lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #44444d;"&gt;&amp;nbsp;&lt;/span&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt; You may use TestDriven.NET, or Telerik&amp;rsquo;s Just Code Unit Test runner within Visual Studio to run xUnit Test methods. If you are ReSharper user &amp;ndash; xUnitContrib project has plugin you can use for ReSharper support.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-family: mceinline; color: #30332d; font-size: x-large;"&gt;&lt;span style="font-size: 19px; line-height: 21px;"&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+&lt;p class="MsoNormal"&gt;&lt;span&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Summary&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: Arial, sans-serif; font-size: 16px; color: #30332d; line-height: 18px;"&gt;If you are TDD developer and would love to experiment and extend Unit Tests, I would certainly recommend that you should try xUnit. The attribute names can be unfamiliar in the first go, but the amount of benefits you get here is quite noticeable comparing to other testing frameworks. &lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&lt;/span&gt;Developing your application and writing Unit Test at the same time is not easy as sometimes you need to ensure you save time by reducing unwanted code and spending less time for debugging and refactoring tasks. xUnit provides a nice way to overcome these issues and I highly recommend it.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Below are some links to get you started with xUnit.&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Download xUnit &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;a href="http://xunit.codeplex.com/"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;http://xunit.codeplex.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;; color: #30332d;"&gt;Download xUnit contrib&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;a href="http://xunitcontrib.codeplex.com/"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;http://xunitcontrib.codeplex.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;Integrating xUnit to Team Build process&lt;/p&gt;
+&lt;p class="MsoNormal"&gt;&lt;a href="http://jonnekats.wordpress.com/2009/05/07/integrate-xunit-tests-into-your-daily-team-build/"&gt;&lt;span style="font-size: 12.0pt; line-height: 115%; font-family: &amp;quot;Arial&amp;quot;,&amp;quot;sans-serif&amp;quot;;"&gt;http://jonnekats.wordpress.com/2009/05/07/integrate-xunit-tests-into-your-daily-team-build/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</content>
+  <ispublished>True</ispublished>
+  <iscommentsenabled>True</iscommentsenabled>
+  <pubDate>2010-09-18 22:38:00</pubDate>
+  <lastModified>2010-09-19 13:54:36</lastModified>
+  <raters>0</raters>
+  <rating>0</rating>
+  <slug>Why-you-should-consider-using-xUnit</slug>
+  <tags>
+    <tag>Unit Tests</tag>
+  </tags>
+  <comments />
+  <categories>
+    <category>fd41e292-56d9-4b00-85ad-dc53bbdaee74</category>
+    <category>12448c79-381f-4996-a557-1167a36eaf18</category>
+  </categories>
+  <notifications />
+</post>
